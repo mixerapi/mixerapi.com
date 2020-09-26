@@ -19,3 +19,6 @@
 [submodule "rest"]
 	path = rest
 	url = https://github.com/mixerapi/rest
+[submodule "cakephp-swagger-bake"]
+	path = cakephp-swagger-bake
+	url = https://github.com/cnizzardini/cakephp-swagger-bake
