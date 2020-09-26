@@ -4,9 +4,6 @@
 [submodule "collection-view"]
 	path = collection-view
 	url = https://github.com/mixerapi/collection-view
-[submodule "cakephp-swagger-bake"]
-	path = cakephp-swagger-bake
-	url = https://github.com/mixerapi/cakephp-swagger-bake
 [submodule "exception-render"]
 	path = exception-render
 	url = https://github.com/mixerapi/exception-render
