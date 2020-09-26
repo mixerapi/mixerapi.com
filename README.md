@@ -34,3 +34,13 @@ Build will generate `site/`.
 ```console
 docker run --rm -it --network=host -v ${PWD}:/docs --user $(id -u):$(id -g) systematical/mixerapidocs:latest mkdocs build
 ```
+
+## Adding new plugins
+
+Add the submodule
+
+```console
+git submodule add https://github.com/mixerapi/my-new-plugin
+```
+
+Then add it to the nav in `mkdocs.yml`
