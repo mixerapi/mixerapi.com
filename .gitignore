@@ -1,3 +1,10 @@
 .idea
 site/
 /docs_/
+bake/
+collection-view/
+cakephp-swagger-bake/
+exception-render/
+hal-view/
+json-ld-view
+mixerapi/
