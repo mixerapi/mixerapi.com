@@ -19,3 +19,6 @@
 [submodule "mixerapi"]
 	path = mixerapi
 	url = https://github.com/mixerapi/mixerapi
+[submodule "rest"]
+	path = rest
+	url = https://github.com/mixerapi/rest
