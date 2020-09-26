@@ -18,14 +18,14 @@ theme:
   features:
   - navigation.expand
 nav:
-- Baking Controllers: bake
-- Exception Rendering: exception-render
-- OpenAPI (Swagger): cakephp-swagger-bake
+- Baking Controllers: ./bake
+- Exception Rendering: ./exception-render
+- OpenAPI (Swagger): ./cakephp-swagger-bake
 - Response Formats:
-  - JSON / XML: collection-view
-  - HAL+JSON: hal-view
-  - JSON-LD: json-ld-view
-- RESTful Routes: rest
+  - JSON / XML: ./collection-view
+  - HAL+JSON: ./hal-view
+  - JSON-LD: ./json-ld-view
+- RESTful Routes: ./rest
 markdown_extensions:
 - pymdownx.highlight:
     extend_pygments_lang:
