@@ -1,0 +1,1307 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.14">
+    
+    
+      
+        <title>SwaggerBake plugin for CakePHP4 - MixerAPI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.d3202873.min.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ff0a5ce4.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ef5552">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#swaggerbake-plugin-for-cakephp4" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="MixerAPI" class="md-header-nav__button md-logo" aria-label="MixerAPI">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 2l-5 4.5v11l5-4.5V2M6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            MixerAPI
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              SwaggerBake plugin for CakePHP4
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/mixerapi/mixerapi/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="MixerAPI" class="md-nav__button md-logo" aria-label="MixerAPI">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 2l-5 4.5v11l5-4.5V2M6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5z"/></svg>
+
+    </a>
+    MixerAPI
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/mixerapi/mixerapi/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../bake" title="Baking Controllers" class="md-nav__link">
+      Baking Controllers
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../exception-render" title="Exception Rendering" class="md-nav__link">
+      Exception Rendering
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="." title="OpenAPI (Swagger)" class="md-nav__link">
+      OpenAPI (Swagger)
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Response Formats
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Response Formats" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Response Formats
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../collection-view" title="JSON / XML" class="md-nav__link">
+      JSON / XML
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hal-view" title="HAL+JSON" class="md-nav__link">
+      HAL+JSON
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../json-ld-view" title="JSON-LD" class="md-nav__link">
+      JSON-LD
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../rest" title="RESTful Routes" class="md-nav__link">
+      RESTful Routes
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    Table of Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    Setup
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#automated-setup" class="md-nav__link">
+    Automated Setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-setup" class="md-nav__link">
+    Manual Setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-a-route-to-swaggerui" class="md-nav__link">
+    Add a route to SwaggerUI
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting Started
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automatic-documentation" class="md-nav__link">
+    Automatic Documentation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#doc-blocks" class="md-nav__link">
+    Doc Blocks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#annotations-for-extended-functionality" class="md-nav__link">
+    Annotations for Extended Functionality
+  </a>
+  
+    <nav class="md-nav" aria-label="Annotations for Extended Functionality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#swagpaginator" class="md-nav__link">
+    @SwagPaginator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swagsearch" class="md-nav__link">
+    @SwagSearch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swagquery" class="md-nav__link">
+    @SwagQuery
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swagform" class="md-nav__link">
+    @SwagForm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swagdto" class="md-nav__link">
+    @SwagDto
+  </a>
+  
+    <nav class="md-nav" aria-label="@SwagDto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#swagdtoquery" class="md-nav__link">
+    @SwagDtoQuery
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swagdtoform" class="md-nav__link">
+    @SwagDtoForm
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swagheader" class="md-nav__link">
+    @SwagHeader
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swagpathparameter" class="md-nav__link">
+    @SwagPathParameter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swagsecurity" class="md-nav__link">
+    @SwagSecurity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swagoperation" class="md-nav__link">
+    @SwagOperation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swagrequestbody" class="md-nav__link">
+    @SwagRequestBody
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swagrequestbodycontent" class="md-nav__link">
+    @SwagRequestBodyContent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swagresponseschema" class="md-nav__link">
+    @SwagResponseSchema
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swagpath" class="md-nav__link">
+    @SwagPath
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swagentity" class="md-nav__link">
+    @SwagEntity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swagentityattribute" class="md-nav__link">
+    @SwagEntityAttribute
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extending-swaggerbake" class="md-nav__link">
+    Extending SwaggerBake
+  </a>
+  
+    <nav class="md-nav" aria-label="Extending SwaggerBake">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-your-own-swaggerui" class="md-nav__link">
+    Using Your Own SwaggerUI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-your-own-controller" class="md-nav__link">
+    Using Your Own Controller
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-your-own-layout-and-templates" class="md-nav__link">
+    Using Your Own Layout and Templates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate-swagger-on-your-terms" class="md-nav__link">
+    Generate Swagger On Your Terms
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-instances-of-swagger-bake" class="md-nav__link">
+    Multiple Instances of Swagger Bake
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-system" class="md-nav__link">
+    Event System
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debug-commands" class="md-nav__link">
+    Debug Commands
+  </a>
+  
+    <nav class="md-nav" aria-label="Debug Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#swagger-routes" class="md-nav__link">
+    swagger routes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swagger-models" class="md-nav__link">
+    swagger models
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bake-theme" class="md-nav__link">
+    Bake Theme
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#details" class="md-nav__link">
+    Details
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supported-versions" class="md-nav__link">
+    Supported Versions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-issues" class="md-nav__link">
+    Common Issues
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#swagger-ui" class="md-nav__link">
+    Swagger UI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swaggerbakeruntimeexceptions" class="md-nav__link">
+    SwaggerBakeRunTimeExceptions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-issues" class="md-nav__link">
+    Other Issues
+  </a>
+  
+    <nav class="md-nav" aria-label="Other Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#missing-actions-missing-paths-in-swagger" class="md-nav__link">
+    Missing actions (missing paths) in Swagger
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#missing-csrf-token-body" class="md-nav__link">
+    Missing CSRF token body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my-route-isnt-displaying-in-swagger-ui" class="md-nav__link">
+    My route isn't displaying in Swagger UI
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reporting-issues" class="md-nav__link">
+    Reporting Issues
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contribute" class="md-nav__link">
+    Contribute
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coding-standards" class="md-nav__link">
+    Coding Standards
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unit-tests" class="md-nav__link">
+    Unit Tests
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/mixerapi/mixerapi/edit/master/docs/cakephp-swagger-bake/README.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <h1 id="swaggerbake-plugin-for-cakephp4">SwaggerBake plugin for CakePHP4</h1>
+<p><a href="https://packagist.org/packages/cnizzardini/cakephp-swagger-bake"><img alt="Latest Version on Packagist" src="https://img.shields.io/packagist/v/cnizzardini/cakephp-swagger-bake.svg?style=flat-square" /></a>
+<a href="https://travis-ci.org/cnizzardini/cakephp-swagger-bake"><img alt="Build Status" src="https://travis-ci.org/cnizzardini/cakephp-swagger-bake.svg?branch=master" /></a>
+<a href="https://coveralls.io/github/cnizzardini/cakephp-swagger-bake?branch=master"><img alt="Coverage Status" src="https://coveralls.io/repos/github/cnizzardini/cakephp-swagger-bake/badge.svg?branch=master" /></a>
+<a href="LICENSE/"><img alt="License: MIT" src="https://img.shields.io/badge/license-mit-blue" /></a>
+<a href="http://mixerapi.com"><img alt="MixerApi" src="https://img.shields.io/badge/mixer-api-red?logo=data:image/png;base64,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" /></a>
+<a href="https://book.cakephp.org/4/en/index.html"><img alt="CakePHP" src="https://img.shields.io/badge/cakephp-%3E%3D%204.0-red?logo=cakephp" /></a>
+<a href="https://php.net/"><img alt="Minimum PHP Version" src="https://img.shields.io/badge/php-%3E%3D%207.2-8892BF.svg?logo=php" /></a>
+<a href="https://www.openapis.org/"><img alt="OpenAPI" src="https://img.shields.io/badge/openapi-3.0-green?logo=openapi-initiative" /></a></p>
+<p>A delightfully tasty tool for generating Swagger documentation with OpenApi 3.0.0 schema. This plugin automatically 
+builds your Swagger UI and ReDoc from your existing cake models and routes.</p>
+<ul>
+<li>Creates OpenApi paths and operations from your <a href="https://book.cakephp.org/4/en/development/rest.html">RESTful</a> routes 
+and controllers.</li>
+<li>Creates OpenAPI Schema from your Entities and Tables.</li>
+<li>Integrates with: 
+<a href="https://book.cakephp.org/4/en/controllers/components/pagination.html">Paginator</a>, 
+<a href="https://github.com/FriendsOfCake/search">friendsofcake/search</a>, 
+<a href="https://book.cakephp.org/authentication/2/en/index.html">Authentication</a>, 
+<a href="https://api.cakephp.org/4.0/class-Cake.Validation.Validator.html">Validator</a>, and 
+<a href="#bake-theme">Bake</a>.</li>
+<li>Provides additional functionality through Annotations and Doc Blocks.</li>
+</ul>
+<p><a href="http://cakephpswaggerbake.cnizz.com/">Demo Site</a> | 
+<a href="https://github.com/cnizzardini/cakephp-swagger-bake-demo">Demo Code</a> | 
+<a href="assets/screenshot.png">Screenshot</a> </p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#setup">Setup</a></li>
+<li><a href="#getting-started">Getting Started</a></li>
+<li><a href="#automatic-documentation">Automatic Documentation</a></li>
+<li><a href="#doc-blocks">Doc Blocks</a></li>
+<li><a href="#annotations-for-extended-functionality">Annotations for Extended Functionality</a></li>
+<li><a href="#extending-swaggerbake">Extending SwaggerBake</a></li>
+<li><a href="#debug-commands">Debug Commands</a></li>
+<li><a href="#bake-theme">Bake Theme</a></li>
+<li><a href="#details">...</a></li>
+</ul>
+<h2 id="installation">Installation</h2>
+<p>SwaggerBake requires CakePHP4 and a few dependencies that will be automatically installed via composer.</p>
+<div class="highlight"><pre><span></span><code>composer require cnizzardini/cakephp-swagger-bake
+</code></pre></div>
+
+<p>Run <code>bin/cake plugin load SwaggerBake</code> or manually load the plugin: </p>
+<div class="highlight"><pre><span></span><code><span class="c1"># src/Application.php</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">bootstrap</span><span class="p">()</span><span class="o">:</span> <span class="nx">void</span>
+<span class="p">{</span>
+    <span class="c1">// other logic...</span>
+    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">addPlugin</span><span class="p">(</span><span class="s1">&#39;SwaggerBake&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 id="setup">Setup</h2>
+<p>For standard applications that have not split their API into plugins, the automated setup should work. Otherwise 
+use the manual setup.</p>
+<h3 id="automated-setup">Automated Setup</h3>
+<p>Run <code>bin/cake swagger install</code> and then <a href="#add-a-route-to-swaggerui">add a route</a>.</p>
+<h3 id="manual-setup">Manual Setup</h3>
+<ul>
+<li>
+<p>Create a base swagger.yml file in <code>config\swagger.yml</code>. An example file is provided <a href="assets/swagger.yml">here</a>. </p>
+</li>
+<li>
+<p>Create a <code>config/swagger_bake.php</code> file. See the example file <a href="assets/swagger_bake.php">here</a> for further 
+explanation. Then just add a route.</p>
+</li>
+</ul>
+<h3 id="add-a-route-to-swaggerui">Add a route to SwaggerUI</h3>
+<p>Create a route for the SwaggerUI page in <code>config/routes.php</code>, example:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">$builder</span><span class="o">-&gt;</span><span class="na">connect</span><span class="p">(</span><span class="s1">&#39;/my-swagger-ui&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;controller&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Swagger&#39;</span><span class="p">,</span> <span class="s1">&#39;action&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;index&#39;</span><span class="p">,</span> <span class="s1">&#39;plugin&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;SwaggerBake&#39;</span><span class="p">]);</span>
+</code></pre></div>
+
+<h2 id="getting-started">Getting Started</h2>
+<ul>
+<li>
+<p>You can generate OpenAPI json from the command line at anytime with <code>bin/cake swagger bake</code>.</p>
+</li>
+<li>
+<p>If Hot Reload is enabled (<a href="assets/swagger_bake.php">see config</a>) OpenAPI will be generated each time you browse 
+to SwaggerUI (or Redoc) in your web browser.</p>
+</li>
+<li>
+<p>Checkout the <a href="#debug-commands">debug commands</a> for troubleshooting and the <a href="#bake-theme">bake theme</a> for generating 
+RESTful controllers.</p>
+</li>
+</ul>
+<h2 id="automatic-documentation">Automatic Documentation</h2>
+<p>I built this library to reduce the need for annotations to build documentation. SwaggerBake will automatically 
+build the following from your existing routes and models without additional effort:</p>
+<ul>
+<li>Paths<ul>
+<li>Resource (route)</li>
+</ul>
+</li>
+<li>Operations<ul>
+<li>Summary and description</li>
+<li>GET, POST, PATCH, DELETE</li>
+<li>Form fields and JSON using your Cake models</li>
+<li>Responses</li>
+<li>Sub resources</li>
+<li>Security/Authentication</li>
+</ul>
+</li>
+<li>Schema</li>
+</ul>
+<p><a href="#details">See details</a> for how CakePHP conventions are interpreted into OpenAPI 3.0 schema.</p>
+<p>SwaggerBake works with your existing YML definitions and will not overwrite anything. By default, it uses 
+components &gt; schemas &gt; Exception as your Swagger documentations Exception schema. See the default 
+<a href="assets/swagger.yml">swagger.yml</a> and <code>exceptionSchema</code> in <a href="assets/swagger_bake.php">swagger_bake.php</a> for more info.</p>
+<h2 id="doc-blocks">Doc Blocks</h2>
+<p>SwaggerBake will parse your <a href="https://docs.phpdoc.org/latest/guides/docblocks.html">DocBlocks</a> for information. The 
+first line reads as the Operation Summary and the second as the Operation Description, <code>@see</code>, <code>@deprecated</code>, and 
+<code>@throws</code> are also supported. Throw tags use the Exception classes HTTP status code. For instance, a 
+<code>MethodNotAllowedException</code> displays as a 405 response in Swagger UI, while a standard PHP Exception displays as a 500 
+code.</p>
+<div class="highlight"><pre><span></span><code><span class="sd">/**</span>
+<span class="sd"> * Swagger Operation Summary</span>
+<span class="sd"> * </span>
+<span class="sd"> * This displays as the operations long description</span>
+<span class="sd"> * </span>
+<span class="sd"> * @see https://book.cakephp.org/4/en/index.html The link and this description appear in Swagger</span>
+<span class="sd"> * @deprecated</span>
+<span class="sd"> * @throws BadRequestException An optional bad request description here</span>
+<span class="sd"> * @throws Exception</span>
+<span class="sd"> */</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">()</span> <span class="p">{}</span>
+</code></pre></div>
+
+<h2 id="annotations-for-extended-functionality">Annotations for Extended Functionality</h2>
+<p>SwaggerBake provides some optional Annotations for enhanced functionality. These can be imported individually from 
+<code>SwaggerBake\Lib\Annotation</code> or set to an alias such as <code>Swag</code>: <code>use SwaggerBake\Lib\Annotation as Swag</code>.</p>
+<p><a href="src/Lib/Annotation#swaggerbake-annotations">Read the Annotations README</a> for detailed examples.</p>
+<h4 id="swagpaginator">@SwagPaginator</h4>
+<p>Method level annotation for adding <a href="https://book.cakephp.org/4/en/controllers/components/pagination.html">CakePHP Paginator</a> 
+query parameters: page, limit, sort, and direction. </p>
+<p><a href="src/Lib/Annotation#swagpaginator">Read more</a></p>
+<div class="highlight"><pre><span></span><code><span class="sd">/**</span>
+<span class="sd"> * @Swag\SwagPaginator</span>
+<span class="sd"> */</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">()</span> <span class="p">{}</span>
+</code></pre></div>
+
+<h4 id="swagsearch">@SwagSearch</h4>
+<p>Method level annotation for documenting search parameters using the popular <a href="https://github.com/FriendsOfCake/search">friendsofcake/search</a> plugin.</p>
+<p><a href="src/Lib/Annotation#swagsearch">Read more</a></p>
+<div class="highlight"><pre><span></span><code><span class="k">use</span> <span class="nx">SwaggerBake\Lib\Extension\CakeSearch\Annotation\SwagSearch</span><span class="p">;</span>
+<span class="sd">/**</span>
+<span class="sd"> * @SwagSearch(tableClass=&quot;\App\Model\Table\ActorsTable&quot;, collection=&quot;default&quot;)</span>
+<span class="sd"> */</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">()</span> <span class="p">{}</span>
+</code></pre></div>
+
+<h4 id="swagquery">@SwagQuery</h4>
+<p>Method level annotation for adding query parameters. </p>
+<p><a href="src/Lib/Annotation#swagquery">Read more</a></p>
+<div class="highlight"><pre><span></span><code><span class="sd">/**</span>
+<span class="sd"> * @Swag\SwagQuery(name=&quot;queryParamName&quot;, type=&quot;string&quot;, description=&quot;string&quot;)</span>
+<span class="sd"> */</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">()</span> <span class="p">{}</span>
+</code></pre></div>
+
+<h4 id="swagform">@SwagForm</h4>
+<p>Method level annotation for adding form data fields. </p>
+<p><a href="src/Lib/Annotation#swagform">Read more</a></p>
+<div class="highlight"><pre><span></span><code><span class="sd">/**</span>
+<span class="sd"> * @Swag\SwagForm(name=&quot;fieldName&quot;, type=&quot;string&quot;, description=&quot;string&quot;, required=false, enum={&quot;a&quot;,&quot;b&quot;})</span>
+<span class="sd"> */</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">()</span> <span class="p">{}</span>
+</code></pre></div>
+
+<h4 id="swagdto">@SwagDto</h4>
+<p>Method level annotation for building query or form parameters from a DataTransferObject. DTOs are more than just a 
+best practice. Using them with SwaggerBake greatly reduces the amount of annotations you need to write. Consider 
+using a DTO in place of SwagQuery or SwagForm. </p>
+<p><a href="src/Lib/Annotation#swagdto">Read more</a></p>
+<h5 id="swagdtoquery">@SwagDtoQuery</h5>
+<p>Property level annotation for use in your SwagDto classes. </p>
+<p><a href="src/Lib/Annotation#swagdtoquery">Read more</a></p>
+<h5 id="swagdtoform">@SwagDtoForm</h5>
+<p>Property level annotation for use in your SwagDto classes. </p>
+<p><a href="src/Lib/Annotation#swagdtoform">Read more</a></p>
+<h4 id="swagheader">@SwagHeader</h4>
+<p>Method level annotation for adding header parameters. </p>
+<p><a href="src/Lib/Annotation#swagheader">Read more</a></p>
+<div class="highlight"><pre><span></span><code><span class="sd">/**</span>
+<span class="sd"> * @Swag\SwagHeader(name=&quot;X-HEAD-ATTRIBUTE&quot;, type=&quot;string&quot;, description=&quot;string&quot;)</span>
+<span class="sd"> */</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">()</span> <span class="p">{}</span>
+</code></pre></div>
+
+<h4 id="swagpathparameter">@SwagPathParameter</h4>
+<p>Method level annotation for modifying path parameters. </p>
+<p><a href="src/Lib/Annotation#swagpathparameter">Read more</a></p>
+<div class="highlight"><pre><span></span><code><span class="sd">/**</span>
+<span class="sd"> * @Swag\SwagPathParameter(name=&quot;id&quot;, type=&quot;integer&quot;, format=&quot;int64&quot;, description=&quot;ID&quot;)</span>
+<span class="sd"> */</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">view</span><span class="p">(</span><span class="nv">$id</span><span class="p">)</span> <span class="p">{}</span>
+</code></pre></div>
+
+<h4 id="swagsecurity">@SwagSecurity</h4>
+<p>Method level annotation for adding authentication requirements. This annotation takes precedence over settings that 
+SwaggerBake gathers from AuthenticationComponent. </p>
+<p><a href="#details">Read details below</a></p>
+<div class="highlight"><pre><span></span><code><span class="sd">/**</span>
+<span class="sd"> * @Swag\SwagSecurity(name=&quot;BearerAuth&quot;, scopes={&quot;Read&quot;,&quot;Write&quot;})</span>
+<span class="sd"> */</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">()</span> <span class="p">{}</span>
+</code></pre></div>
+
+<h4 id="swagoperation">@SwagOperation</h4>
+<p>Method level annotation for OpenApi Operations. </p>
+<p><a href="src/Lib/Annotation#swagoperation">Read more</a></p>
+<div class="highlight"><pre><span></span><code><span class="sd">/**</span>
+<span class="sd"> * @Swag\SwagOperation(isVisible=false, tagNames={&quot;MyTag&quot;,&quot;AnotherTag&quot;}, showPut=false)</span>
+<span class="sd"> */</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">()</span> <span class="p">{}</span>
+</code></pre></div>
+
+<h4 id="swagrequestbody">@SwagRequestBody</h4>
+<p>Method level annotation for describing request body. Set ignoreCakeSchema for full control over request body. </p>
+<p><a href="src/Lib/Annotation#swagrequestbody">Read more</a></p>
+<div class="highlight"><pre><span></span><code><span class="sd">/**</span>
+<span class="sd"> * @Swag\SwagRequestBody(description=&quot;my description&quot;, required=true, ignoreCakeSchema=true)</span>
+<span class="sd"> */</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">()</span> <span class="p">{}</span>
+</code></pre></div>
+
+<h4 id="swagrequestbodycontent">@SwagRequestBodyContent</h4>
+<p>Method level annotation for describing custom content in request body. The mimeTypes parameter is optional. If empty, 
+all mimeTypes defined as <code>requestAccepts</code> in your swagger_bake.php will be used. </p>
+<p><a href="src/Lib/Annotation#swagrequestbodycontent">Read more</a></p>
+<ul>
+<li><code>mimeType</code> has been deprecated in &gt;= v1.5, use array form with <code>mimeTypes</code></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="sd">/**</span>
+<span class="sd"> * @Swag\SwagRequestBodyContent(refEntity=&quot;#/components/schemas/Actor&quot;, mimeTypes={&quot;application/json&quot;})</span>
+<span class="sd"> */</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">()</span> <span class="p">{}</span>
+</code></pre></div>
+
+<h4 id="swagresponseschema">@SwagResponseSchema</h4>
+<p>Method level annotation for defining response schema. </p>
+<p><a href="src/Lib/Annotation#swagresponseschema">Read more</a></p>
+<ul>
+<li><code>mimeType</code> is deprecated in &gt;= v1.5, use <code>mimeTypes</code> as an array.</li>
+<li><code>httpCode</code> is deprecated in &gt;= v1.3, use <code>statusCode</code> </li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="sd">/**</span>
+<span class="sd"> * @Swag\SwagResponseSchema(refEntity=&quot;#/components/schemas/Actor&quot;, description=&quot;Summary&quot;, statusCode=&quot;200&quot;)</span>
+<span class="sd"> */</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">()</span> <span class="p">{}</span>
+</code></pre></div>
+
+<h4 id="swagpath">@SwagPath</h4>
+<p>Class level annotation for exposing controllers to Swagger UI. You can hide entire controllers with this annotation. </p>
+<p><a href="src/Lib/Annotation#swagpath">Read more</a></p>
+<div class="highlight"><pre><span></span><code><span class="sd">/**</span>
+<span class="sd"> * @Swag\SwagPath(isVisible=false, description=&quot;optional description&quot;, summary=&quot;operational summary&quot;)</span>
+<span class="sd"> */</span>
+<span class="k">class</span> <span class="nc">UsersController</span> <span class="k">extends</span> <span class="nx">AppController</span> <span class="p">{</span>
+</code></pre></div>
+
+<h4 id="swagentity">@SwagEntity</h4>
+<p>Class level annotation for exposing entities to Swagger UI. By default, all entities with routes will display as Swagger 
+schema. You can hide a schema or display a schema that does not have an associated route. </p>
+<p><a href="src/Lib/Annotation#swagentity">Read more</a></p>
+<div class="highlight"><pre><span></span><code><span class="sd">/**</span>
+<span class="sd"> * @Swag\SwagEntity(isVisible=false, title=&quot;optional title&quot;, description=&quot;optional description&quot;)</span>
+<span class="sd"> */</span>
+<span class="k">class</span> <span class="nc">Employee</span> <span class="k">extends</span> <span class="nx">Entity</span> <span class="p">{</span>
+</code></pre></div>
+
+<h4 id="swagentityattribute">@SwagEntityAttribute</h4>
+<p>Class level annotation for customizing Schema Attributes. </p>
+<p><a href="src/Lib/Annotation#swagentityattribute">Read more</a></p>
+<div class="highlight"><pre><span></span><code><span class="sd">/**</span>
+<span class="sd"> * @Swag\SwagEntityAttribute(name=&quot;modified&quot;, type=&quot;string&quot;, description=&quot;string&quot;)</span>
+<span class="sd"> */</span>
+<span class="k">class</span> <span class="nc">Employee</span> <span class="k">extends</span> <span class="nx">Entity</span> <span class="p">{</span>
+</code></pre></div>
+
+<h2 id="extending-swaggerbake">Extending SwaggerBake</h2>
+<p>There are several options to extend functionality.</p>
+<h4 id="using-your-own-swaggerui">Using Your Own SwaggerUI</h4>
+<p>You may use your own swagger install in lieu of the version that comes with SwaggerBake. Simply don't add a custom 
+route as indicated in the installation steps. In this case just reference the generated swagger.json within your 
+userland Swagger UI install.</p>
+<h4 id="using-your-own-controller">Using Your Own Controller</h4>
+<p>You might want to perform some additional logic (checking for authentication) before rendering the built-in Swagger UI. 
+This is easy to do. Just create your own route and controller, then reference the built-in layout and template: </p>
+<div class="highlight"><pre><span></span><code><span class="c1">// config/routes.php</span>
+<span class="nv">$builder</span><span class="o">-&gt;</span><span class="na">connect</span><span class="p">(</span><span class="s1">&#39;/my-swagger-docs&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;controller&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;MySwagger&#39;</span><span class="p">,</span> <span class="s1">&#39;action&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;index&#39;</span><span class="p">]);</span>
+</code></pre></div>
+
+<p>To get started, copy <a href="src/Controller/SwaggerController.php">SwaggerController</a> into your project.</p>
+<h4 id="using-your-own-layout-and-templates">Using Your Own Layout and Templates</h4>
+<p>You will need to use your own controller (see above). From there you can copy the <a href="templates/layout">layouts</a> and 
+<a href="templates/Swagger">templates</a> into your project and inform your controller action to use them instead. Checkout out 
+the CakePHP documentation on <a href="https://book.cakephp.org/4/en/views.html">Views</a> for specifics. This can be useful if 
+you'd like to add additional functionality to SwaggerUI (or Redoc) using their APIs or if your project is not 
+installed in your web servers document root (i.e. a sub-folder).</p>
+<h4 id="generate-swagger-on-your-terms">Generate Swagger On Your Terms</h4>
+<p>There a three options for generating swagger.json:</p>
+<ol>
+<li>
+<p>Call <code>swagger bake</code> which can be included as part of your build process.</p>
+</li>
+<li>
+<p>Enable the <code>hotReload</code> option in config/swagger_bake.php (recommended for local development only).</p>
+</li>
+<li>
+<p>Call SwaggerBake programmatically: </p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="nv">$swagger</span> <span class="o">=</span> <span class="p">(</span><span class="k">new</span> <span class="nx">\SwaggerBake\Lib\Factory\SwaggerFactory</span><span class="p">())</span><span class="o">-&gt;</span><span class="na">create</span><span class="p">();</span>
+<span class="nv">$swagger</span><span class="o">-&gt;</span><span class="na">getArray</span><span class="p">();</span> <span class="c1"># returns swagger array</span>
+<span class="nv">$swagger</span><span class="o">-&gt;</span><span class="na">toString</span><span class="p">();</span> <span class="c1"># returns swagger json</span>
+<span class="nv">$swagger</span><span class="o">-&gt;</span><span class="na">writeFile</span><span class="p">(</span><span class="s1">&#39;/full/path/to/your/swagger.json&#39;</span><span class="p">);</span> <span class="c1"># writes swagger.json</span>
+</code></pre></div>
+
+<h4 id="multiple-instances-of-swagger-bake">Multiple Instances of Swagger Bake</h4>
+<p>If your application has multiple APIs that are split into plugins you can generate unique OpenAPI schema, Swagger UI, 
+and Redoc for each plugin. Setup a new <code>swagger_bake.php</code> and <code>swagger.yaml</code> in <code>plugins/OtherApi/config</code>. These 
+configurations should point to your plugins paths and namespaces. Next, create a custom 
+<a href="src/Controller/SwaggerController.php">SwaggerController</a> and load the configuration within <code>initialize()</code>:</p>
+<div class="highlight"><pre><span></span><code>    <span class="k">public</span> <span class="k">function</span> <span class="nf">initialize</span><span class="p">()</span><span class="o">:</span> <span class="nx">void</span>
+    <span class="p">{</span>
+        <span class="k">parent</span><span class="o">::</span><span class="na">initialize</span><span class="p">();</span> <span class="c1">// TODO: Change the autogenerated stub</span>
+        <span class="nx">Configure</span><span class="o">::</span><span class="na">load</span><span class="p">(</span><span class="s1">&#39;OtherApi.swagger_bake&#39;</span><span class="p">,</span> <span class="s1">&#39;default&#39;</span><span class="p">);</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">loadComponent</span><span class="p">(</span><span class="s1">&#39;SwaggerBake.SwaggerUi&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+<p>When running <code>bin/cake swagger bake</code> you will need to specify your plugins swagger_bake config:</p>
+<div class="highlight"><pre><span></span><code>bin/cake swagger bake --config OtherApi.swagger_bake
+</code></pre></div>
+
+<h4 id="event-system">Event System</h4>
+<p>You can extend Swagger Bake further with events. Read the 
+<a href="src/Lib/Extension#swaggerbake-extensions">extension documentation</a> for details.</p>
+<h2 id="debug-commands">Debug Commands</h2>
+<p>In addition to <code>swagger bake</code> these console helpers provide insight into how your Swagger documentation is generated.</p>
+<h4 id="swagger-routes"><code>swagger routes</code></h4>
+<p>Displays a list of routes that can be viewed in Swagger.</p>
+<div class="highlight"><pre><span></span><code>bin/cake swagger routes
+</code></pre></div>
+
+<h4 id="swagger-models"><code>swagger models</code></h4>
+<p>Displays a list of models that can be viewed in Swagger.</p>
+<div class="highlight"><pre><span></span><code>bin/cake swagger models
+</code></pre></div>
+
+<h2 id="bake-theme">Bake Theme</h2>
+<p>SwaggerBake comes with <a href="templates/bake">Bake templates</a> for scaffolding RESTful controllers compatible with SwaggerBake 
+and OpenAPI 3.0 schema. Using the bake theme is completely optional, but will save you some time since the default 
+bake theme is not specifically designed for RESTful APIs.</p>
+<div class="highlight"><pre><span></span><code>bin/cake bake controller {Name} --theme SwaggerBake
+</code></pre></div>
+
+<h2 id="details">Details</h2>
+<p><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRTWE7nsTouFdHZsG6OKlZ-1lHeJGI0wqNlRVEgiG4eCFY0dMxkBLaw313mU_a73U7emoRdFcGPUq94/pubhtml">OpenAPI Schema Support Roadmap</a></p>
+<ul>
+<li>Swagger uses your existing swagger.yml as a base for adding additional paths and schema.</li>
+<li>Generates JSON based on the OpenAPI 3 specification. I am still working on implementing the full spec.</li>
+<li>All Schemas and Paths generated must have the following in your CakePHP Application:</li>
+<li>App\Model\Entity class (for schemas only)</li>
+<li>App\Controller class</li>
+<li>Must be a valid route</li>
+<li>Three versions of schema will be created: <ul>
+<li>Default with all properties <code>#/components/schemas/Entity</code></li>
+<li>Writeable properties <code>#/x-swagger-bake/components/schemas/Entity-Write</code></li>
+<li>Readable properties <code>#/x-swagger-bake/components/schemas/Entity-Read</code></li>
+</ul>
+</li>
+<li>Entity Attributes: </li>
+<li>Hidden attributes will not be visible</li>
+<li>Primary Keys will be set to read only by default.</li>
+<li>DateTime fields named <code>created</code> and <code>modified</code> are automatically set to read only per Cake convention.</li>
+<li>CRUD Responses</li>
+<li>Index, Edit, Add, and View methods default to an HTTP 200 with the Controllers related Cake Entity schema.</li>
+<li>Delete defaults to HTTP 204 (no content). </li>
+<li>Table Validators:</li>
+<li>Reads in <a href="https://api.cakephp.org/4.0/class-Cake.Validation.Validator.html">Validator</a> rules such as 
+  requirePresence, minLength, maxLength, basic math comparison operators, regex, inList, hasAtLeast, and hasAtMost.</li>
+<li>Security Scheme </li>
+<li>Leverages the <a href="https://book.cakephp.org/authentication/2/en/index.html">CakePHP AuthenticationComponent</a></li>
+<li>Will automatically set security on operations if a single <a href="https://swagger.io/docs/specification/authentication/">securityScheme</a> 
+  is defined in your swagger.yaml. If more than one security schema exists you will need to use <code>@SwagSecurity</code>.</li>
+<li><code>@SwagSecurity</code> takes precedence.</li>
+<li>SwaggerBake supports the following formats: application/json, application/x-www-form-urlencoded, application/xml, 
+application/hal+json, and application/ld+json</li>
+</ul>
+<p>SwaggerBake does not document schema associations. If your application includes associations on things like 
+GET requests, you can easily add them into your swagger documentation through the OpenAPI <code>allOf</code> property. Since 
+SwaggerBake works in conjunction with OpenAPI YAML you can easily add a new schema with this association. Below is an 
+example of extending an existing City schema to include a Country association.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># in your swagger.yml</span>
+<span class="nt">components</span><span class="p">:</span>
+  <span class="nt">schemas</span><span class="p">:</span>
+    <span class="nt">CityExtended</span><span class="p">:</span>
+      <span class="nt">description</span><span class="p">:</span> <span class="s">&#39;City</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">extended</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">including</span><span class="nv"> </span><span class="s">Country&#39;</span>
+      <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">object</span>
+      <span class="nt">allOf</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">$ref</span><span class="p">:</span> <span class="s">&#39;#/components/schemas/City&#39;</span>
+        <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">object</span>
+          <span class="nt">properties</span><span class="p">:</span>
+            <span class="nt">country</span><span class="p">:</span>
+              <span class="nt">$ref</span><span class="p">:</span> <span class="s">&#39;#/components/schemas/Country&#39;</span>
+</code></pre></div>
+
+<p>Then in your controller action you'd specify the Schema: </p>
+<div class="highlight"><pre><span></span><code><span class="sd">/**</span>
+<span class="sd"> * View method</span>
+<span class="sd"> * @Swag\SwagResponseSchema(refEntity=&quot;#/components/schemas/CityExtended&quot;)</span>
+<span class="sd"> */</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">view</span><span class="p">(</span><span class="nv">$id</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">request</span><span class="o">-&gt;</span><span class="na">allowMethod</span><span class="p">(</span><span class="s1">&#39;get&#39;</span><span class="p">);</span>
+    <span class="nv">$city</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">Cities</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="nv">$id</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;contain&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;Countries&#39;</span><span class="p">]]);</span>
+    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">set</span><span class="p">(</span><span class="nb">compact</span><span class="p">(</span><span class="s1">&#39;cities&#39;</span><span class="p">));</span>
+    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">viewBuilder</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">setOption</span><span class="p">(</span><span class="s1">&#39;serialize&#39;</span><span class="p">,</span> <span class="s1">&#39;cities&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>The demo application includes this and many other examples of usage. Read more about <code>oneOf</code>, <code>anyOf</code>, <code>allOf</code>, and 
+<code>not</code> in the <a href="https://swagger.io/docs/specification/data-models/oneof-anyof-allof-not/">OpenAPI 3 documentation</a>.</p>
+<h2 id="supported-versions">Supported Versions</h2>
+<p>This is built for CakePHP 4.x only. A cake-3.8 option is available, but not supported.</p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Cake Version</th>
+<th>Supported</th>
+<th>Unit Tests</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.*</td>
+<td>4.*</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Currently supported</td>
+</tr>
+<tr>
+<td>cake-3.8</td>
+<td>3.8.*</td>
+<td>No</td>
+<td>Yes</td>
+<td>See branch cake-3.8. Completely untested and unsupported</td>
+</tr>
+</tbody>
+</table>
+<h2 id="common-issues">Common Issues</h2>
+<h3 id="swagger-ui">Swagger UI</h3>
+<p><code>No API definition provided.</code></p>
+<p>Verify that swagger.json exists.</p>
+<h3 id="swaggerbakeruntimeexceptions">SwaggerBakeRunTimeExceptions</h3>
+<p><code>Unable to create swagger file. Try creating an empty file first or checking permissions</code></p>
+<p>Create the swagger.json manually matching the path in your <code>config/swagger_bake.php</code> file.</p>
+<p><code>Output file is not writable</code></p>
+<p>Change permissions on your <code>swagger.json file</code>, <code>764</code> should do.</p>
+<p><code>Controller not found</code></p>
+<p>Make sure a controller actually exists for the route resource. </p>
+<h3 id="other-issues">Other Issues</h3>
+<h4 id="missing-actions-missing-paths-in-swagger">Missing actions (missing paths) in Swagger</h4>
+<p>By default Cake RESTful resources will only create routes for index, view, add, edit and delete. You can add and remove 
+paths using CakePHPs route resource functionality. Read the 
+<a href="https://book.cakephp.org/4/en/development/routing.html">Cake Routing documentation</a> which describes in detail how to 
+add, remove, modify, and alter routes. </p>
+<h4 id="missing-csrf-token-body">Missing CSRF token body</h4>
+<p>Either disable CSRF protection on your main route in <code>config/routes.php</code> or enable CSRF protection in Swagger 
+UI. The library does not currently support adding this in for you.</p>
+<h4 id="my-route-isnt-displaying-in-swagger-ui">My route isn't displaying in Swagger UI</h4>
+<p>Make sure the route is properly defined in your <code>config/routes.php</code> file.</p>
+<h2 id="reporting-issues">Reporting Issues</h2>
+<p>This is a new library so please take some steps before reporting issues. You can copy &amp; paste the JSON SwaggerBake 
+outputs into https://editor.swagger.io/ which will automatically convert the JSON into YML and display potential 
+schema issues.</p>
+<p>Please included the following in your issues a long with a brief description:</p>
+<ul>
+<li>Steps to Reproduce</li>
+<li>Actual Outcome</li>
+<li>Expected Outcome</li>
+</ul>
+<p>Feature requests are welcomed.</p>
+<h2 id="contribute">Contribute</h2>
+<p>Send pull requests to help improve this library. You can include SwaggerBake in your primary Cake project as a 
+local source to make developing easier:</p>
+<ul>
+<li>
+<p>Make a fork of this repository and clone it to your localhost</p>
+</li>
+<li>
+<p>Remove <code>cnizzardini\cakephp-swagger-bake</code> from your <code>composer.json</code></p>
+</li>
+<li>
+<p>Add a paths repository to your <code>composer.json</code></p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>&quot;minimum-stability&quot;: &quot;dev&quot;,
+&quot;repositories&quot;: [
+    {
+        &quot;type&quot;: &quot;path&quot;,
+        &quot;url&quot;: &quot;/absolute/local-path-to/cakephp-swagger-bake&quot;,
+        &quot;options&quot;: {
+          &quot;symlink&quot;: true
+        }
+    }
+]
+</code></pre></div>
+
+<ul>
+<li>Run <code>composer require cnizzardini/cakephp-swagger-bake @dev</code></li>
+</ul>
+<p>Undo these steps when you're done. Read the full composer documentation on loading from path here: 
+<a href="https://getcomposer.org/doc/05-repositories.md#path">https://getcomposer.org/doc/05-repositories.md#path</a></p>
+<h2 id="coding-standards">Coding Standards</h2>
+<p>Coding standards run as part of CI with Travis. You may run these locally with <code>composer check</code>.</p>
+<h2 id="unit-tests">Unit Tests</h2>
+<div class="highlight"><pre><span></span><code>vendor/bin/phpunit
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.2d1db4bd.min.js"></script>
+      <script src="../assets/javascripts/bundle.6627ddf3.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: ['navigation.expand'],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.5eca75d3.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

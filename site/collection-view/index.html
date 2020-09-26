@@ -1,0 +1,573 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.14">
+    
+    
+      
+        <title>MixerAPI CollectionView - MixerAPI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.d3202873.min.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ff0a5ce4.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ef5552">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mixerapi-collectionview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="MixerAPI" class="md-header-nav__button md-logo" aria-label="MixerAPI">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 2l-5 4.5v11l5-4.5V2M6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            MixerAPI
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              MixerAPI CollectionView
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/mixerapi/mixerapi/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="MixerAPI" class="md-nav__button md-logo" aria-label="MixerAPI">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 2l-5 4.5v11l5-4.5V2M6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5z"/></svg>
+
+    </a>
+    MixerAPI
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/mixerapi/mixerapi/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../bake" title="Baking Controllers" class="md-nav__link">
+      Baking Controllers
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../exception-render" title="Exception Rendering" class="md-nav__link">
+      Exception Rendering
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../cakephp-swagger-bake" title="OpenAPI (Swagger)" class="md-nav__link">
+      OpenAPI (Swagger)
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Response Formats
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Response Formats" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Response Formats
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="." title="JSON / XML" class="md-nav__link">
+      JSON / XML
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hal-view" title="HAL+JSON" class="md-nav__link">
+      HAL+JSON
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../json-ld-view" title="JSON-LD" class="md-nav__link">
+      JSON-LD
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../rest" title="RESTful Routes" class="md-nav__link">
+      RESTful Routes
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    Table of Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unit-tests" class="md-nav__link">
+    Unit Tests
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-standards" class="md-nav__link">
+    Code Standards
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/mixerapi/mixerapi/edit/master/docs/collection-view/README.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <h1 id="mixerapi-collectionview">MixerAPI CollectionView</h1>
+<p><a href="https://packagist.org/packages/mixerapi/collection-view"><img alt="Latest Version on Packagist" src="https://img.shields.io/packagist/v/mixerapi/collection-view.svg?style=flat-square" /></a>
+<a href="LICENSE.txt"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-green.svg" /></a>
+<a href="https://github.com/mixerapi/collection-view/actions"><img alt="Build" src="https://github.com/mixerapi/collection-view/workflows/Build/badge.svg?branch=master" /></a>
+<a href="https://coveralls.io/github/mixerapi/collection-view?branch=master"><img alt="Coverage Status" src="https://coveralls.io/repos/github/mixerapi/collection-view/badge.svg?branch=master" /></a>
+<a href="http://mixerapi.com"><img alt="MixerApi" src="https://img.shields.io/badge/mixer-api-red?logo=data:image/png;base64,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" /></a>
+<a href="https://book.cakephp.org/4/en/index.html"><img alt="CakePHP" src="https://img.shields.io/badge/cakephp-%3E%3D%204.0-red?logo=cakephp" /></a>
+<a href="https://php.net/"><img alt="Minimum PHP Version" src="https://img.shields.io/badge/php-%3E%3D%207.2-8892BF.svg?logo=php" /></a></p>
+<p><strong>Alpha stage library</strong></p>
+<p>A simple Collection View for displaying configurable pagination meta data in JSON or XML collection responses.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#setup">Setup</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#configuration">Configuration</a></li>
+</ul>
+<h2 id="installation">Installation</h2>
+<div class="highlight"><pre><span></span><code>composer require mixerapi/collection-view
+bin/cake plugin load MixerApi/CollectionView
+</code></pre></div>
+
+<p>Alternatively after composer installing you can manually load the plugin in your Application:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># src/Application.php</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">bootstrap</span><span class="p">()</span><span class="o">:</span> <span class="nx">void</span>
+<span class="p">{</span>
+    <span class="c1">// other logic...</span>
+    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">addPlugin</span><span class="p">(</span><span class="s1">&#39;MixerApi/CollectionView&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 id="setup">Setup</h2>
+<p>Your controllers must be using the <code>RequestHandler</code> component. This is typically loaded in your <code>AppController</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># src/Controller/AppController.php</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">initialize</span><span class="p">()</span><span class="o">:</span> <span class="nx">void</span>
+<span class="p">{</span>
+    <span class="k">parent</span><span class="o">::</span><span class="na">initialize</span><span class="p">();</span>
+    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">loadComponent</span><span class="p">(</span><span class="s1">&#39;RequestHandler&#39;</span><span class="p">);</span>
+    <span class="c1">// other logic... </span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 id="usage">Usage</h2>
+<p>That's it, you're done. Perform <code>application/xml</code> or <code>application/json</code> requests as normal. You may also request by 
+<code>.xml</code> or <code>.json</code> extensions (assuming you've enabled them in your <code>config/routes.php</code>). This plugin will only modify 
+collections (e.g. controller::index action) requests, not item (e.g. controller::view action) requests. </p>
+<p>JSON Sample:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;collection&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;\/actors&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;count&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+        <span class="nt">&quot;next&quot;</span><span class="p">:</span> <span class="s2">&quot;\/?page=2&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;prev&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;first&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;last&quot;</span><span class="p">:</span> <span class="s2">&quot;\/?page=10&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="nt">&quot;first_name&quot;</span><span class="p">:</span> <span class="s2">&quot;PENELOPE&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;last_name&quot;</span><span class="p">:</span> <span class="s2">&quot;GUINESS&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;modified&quot;</span><span class="p">:</span> <span class="s2">&quot;2006-02-15T04:34:33+00:00&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;films&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;ACADEMY DINOSAUR&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A Epic Drama of a Feminist And a Mad Scientist who must Battle a Teacher in The Canadian Rockies&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;release_year&quot;</span><span class="p">:</span> <span class="s2">&quot;2006&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;language_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                    <span class="nt">&quot;rental_duration&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+                    <span class="nt">&quot;length&quot;</span><span class="p">:</span> <span class="mi">86</span><span class="p">,</span>
+                    <span class="nt">&quot;rating&quot;</span><span class="p">:</span> <span class="s2">&quot;PG&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;special_features&quot;</span><span class="p">:</span> <span class="s2">&quot;Deleted Scenes,Behind the Scenes&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;modified&quot;</span><span class="p">:</span> <span class="s2">&quot;2006-02-15T05:03:42+00:00&quot;</span>
+                <span class="p">}</span>
+            <span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>XML Sample:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;response&gt;</span>
+  <span class="nt">&lt;collection&gt;</span>
+    <span class="nt">&lt;url&gt;</span>/actors<span class="nt">&lt;/url&gt;</span>
+    <span class="nt">&lt;count&gt;</span>2<span class="nt">&lt;/count&gt;</span>
+    <span class="nt">&lt;total&gt;</span>20<span class="nt">&lt;/total&gt;</span>
+    <span class="nt">&lt;next&gt;</span>/?page=2<span class="nt">&lt;/next&gt;</span>
+    <span class="nt">&lt;prev/&gt;</span>
+    <span class="nt">&lt;first/&gt;</span>
+    <span class="nt">&lt;last&gt;</span>/?page=10<span class="nt">&lt;/last&gt;</span>
+  <span class="nt">&lt;/collection&gt;</span>
+  <span class="nt">&lt;data&gt;</span>
+    <span class="nt">&lt;id&gt;</span>1<span class="nt">&lt;/id&gt;</span>
+    <span class="nt">&lt;first_name&gt;</span>PENELOPE<span class="nt">&lt;/first_name&gt;</span>
+    <span class="nt">&lt;last_name&gt;</span>GUINESS<span class="nt">&lt;/last_name&gt;</span>
+    <span class="nt">&lt;modified&gt;</span>2/15/06, 4:34 AM<span class="nt">&lt;/modified&gt;</span>
+    <span class="nt">&lt;films&gt;</span>
+      <span class="nt">&lt;id&gt;</span>1<span class="nt">&lt;/id&gt;</span>
+      <span class="nt">&lt;title&gt;</span>ACADEMY DINOSAUR<span class="nt">&lt;/title&gt;</span>
+      <span class="nt">&lt;description&gt;</span>A Epic Drama of a Feminist And a Mad Scientist who must Battle a Teacher in The Canadian Rockies<span class="nt">&lt;/description&gt;</span>
+      <span class="nt">&lt;release_year&gt;</span>2006<span class="nt">&lt;/release_year&gt;</span>
+      <span class="nt">&lt;language_id&gt;</span>1<span class="nt">&lt;/language_id&gt;</span>
+      <span class="nt">&lt;rental_duration&gt;</span>6<span class="nt">&lt;/rental_duration&gt;</span>
+      <span class="nt">&lt;length&gt;</span>86<span class="nt">&lt;/length&gt;</span>
+      <span class="nt">&lt;rating&gt;</span>PG<span class="nt">&lt;/rating&gt;</span>
+      <span class="nt">&lt;special_features&gt;</span>Deleted Scenes,Behind the Scenes<span class="nt">&lt;/special_features&gt;</span>
+      <span class="nt">&lt;modified&gt;</span>2/15/06, 5:03 AM<span class="nt">&lt;/modified&gt;</span>
+    <span class="nt">&lt;/films&gt;</span>
+  <span class="nt">&lt;/data&gt;</span>
+<span class="nt">&lt;/response&gt;</span>
+</code></pre></div>
+
+<h2 id="configuration">Configuration</h2>
+<p>This is optional. You can alter the names of the response keys, simply create a 
+<a href="assets/collection_view.php">config/collection_view.php</a> file. Using the example below we can change the <code>collection</code> 
+key to <code>pagination</code>, <code>data</code> to <code>items</code>, and alter some key names within our new pagination object. Just keep the mapped 
+items <code>{{names}}</code> as-is. </p>
+<div class="highlight"><pre><span></span><code><span class="k">return</span> <span class="p">[</span>
+    <span class="s1">&#39;CollectionView&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+        <span class="s1">&#39;pagination&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;{{collection}}&#39;</span><span class="p">,</span> <span class="c1">// array that holds pagination data</span>
+        <span class="s1">&#39;pagination.url&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;{{url}}&#39;</span><span class="p">,</span> <span class="c1">// url of current page</span>
+        <span class="s1">&#39;pagination.pageCount&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;{{count}}&#39;</span><span class="p">,</span> <span class="c1">// count on page</span>
+        <span class="s1">&#39;pagination.totalCount&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;{{total}}&#39;</span><span class="p">,</span> <span class="c1">// total items</span>
+        <span class="s1">&#39;pagination.next&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;{{next}}&#39;</span><span class="p">,</span> <span class="c1">// next page url</span>
+        <span class="s1">&#39;pagination.prev&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;{{prev}}&#39;</span><span class="p">,</span> <span class="c1">// previous page url</span>
+        <span class="s1">&#39;pagination.first&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;{{first}}&#39;</span><span class="p">,</span> <span class="c1">// first page url</span>
+        <span class="s1">&#39;pagination.last&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;{{last}}&#39;</span><span class="p">,</span> <span class="c1">// last page url</span>
+        <span class="s1">&#39;items&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;{{data}}&#39;</span><span class="p">,</span> <span class="c1">// the collection of data</span>
+    <span class="p">]</span>
+<span class="p">];</span>
+</code></pre></div>
+
+<h2 id="unit-tests">Unit Tests</h2>
+<div class="highlight"><pre><span></span><code>vendor/bin/phpunit
+</code></pre></div>
+
+<h2 id="code-standards">Code Standards</h2>
+<div class="highlight"><pre><span></span><code>composer check
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.2d1db4bd.min.js"></script>
+      <script src="../assets/javascripts/bundle.6627ddf3.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: ['navigation.expand'],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.5eca75d3.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

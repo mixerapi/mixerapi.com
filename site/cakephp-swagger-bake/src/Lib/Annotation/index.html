@@ -1,0 +1,987 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.14">
+    
+    
+      
+        <title>SwaggerBake Annotations - MixerAPI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.d3202873.min.css">
+      
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ff0a5ce4.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ef5552">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#swaggerbake-annotations" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../../.." title="MixerAPI" class="md-header-nav__button md-logo" aria-label="MixerAPI">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 2l-5 4.5v11l5-4.5V2M6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            MixerAPI
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              SwaggerBake Annotations
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/mixerapi/mixerapi/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="MixerAPI" class="md-nav__button md-logo" aria-label="MixerAPI">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 2l-5 4.5v11l5-4.5V2M6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5z"/></svg>
+
+    </a>
+    MixerAPI
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/mixerapi/mixerapi/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../bake" title="Baking Controllers" class="md-nav__link">
+      Baking Controllers
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../exception-render" title="Exception Rendering" class="md-nav__link">
+      Exception Rendering
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="OpenAPI (Swagger)" class="md-nav__link">
+      OpenAPI (Swagger)
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Response Formats
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Response Formats" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Response Formats
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../collection-view" title="JSON / XML" class="md-nav__link">
+      JSON / XML
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../hal-view" title="HAL+JSON" class="md-nav__link">
+      HAL+JSON
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../json-ld-view" title="JSON-LD" class="md-nav__link">
+      JSON-LD
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../rest" title="RESTful Routes" class="md-nav__link">
+      RESTful Routes
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    Table of Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-annotations" class="md-nav__link">
+    Adding Annotations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#swagpaginator" class="md-nav__link">
+    @SwagPaginator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swagsearch" class="md-nav__link">
+    @SwagSearch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swagquery" class="md-nav__link">
+    @SwagQuery
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swagform" class="md-nav__link">
+    @SwagForm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swagdto" class="md-nav__link">
+    @SwagDto
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swagdtoquery" class="md-nav__link">
+    @SwagDtoQuery
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swagdtoform" class="md-nav__link">
+    @SwagDtoForm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swagheader" class="md-nav__link">
+    @SwagHeader
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swagpathparameter" class="md-nav__link">
+    @SwagPathParameter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swagsecurity" class="md-nav__link">
+    @SwagSecurity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swagoperation" class="md-nav__link">
+    @SwagOperation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swagrequestbody" class="md-nav__link">
+    @SwagRequestBody
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swagrequestbodycontent" class="md-nav__link">
+    @SwagRequestBodyContent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swagresponseschema" class="md-nav__link">
+    @SwagResponseSchema
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swagpath" class="md-nav__link">
+    @SwagPath
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swagentity" class="md-nav__link">
+    @SwagEntity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swagentityattribute" class="md-nav__link">
+    @SwagEntityAttribute
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/mixerapi/mixerapi/edit/master/docs/cakephp-swagger-bake/src/Lib/Annotation/README.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <h1 id="swaggerbake-annotations">SwaggerBake Annotations</h1>
+<p>SwaggerBake provides some optional Annotations for enhanced functionality. There are core annotations and extended 
+annotations which support other Cake plugins. These can be imported individually or set to an alias as seen below.</p>
+<ul>
+<li><code>use SwaggerBake\Lib\Annotation as Swag;</code></li>
+<li><code>use SwaggerBake\Lib\Extension as SwagExt;</code></li>
+</ul>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#adding-annotations">Adding Annotations</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#swagpaginator">@SwagPaginator</a></li>
+<li><a href="#swagsearch">@SwagSearch</a></li>
+<li><a href="#swagquery">@SwagQuery</a></li>
+<li><a href="#swagform">@SwagForm</a></li>
+<li><a href="#swagdto">@SwagDto</a></li>
+<li><a href="#swagdtoquery">@SwagDtoQuery</a></li>
+<li><a href="#swagdtoform">@SwagDtoForm</a></li>
+<li><a href="#swagheader">@SwagHeader</a></li>
+<li><a href="#swagpathparameter">@SwagPathParameter</a></li>
+<li><a href="#swagsecurity">@SwagSecurity</a></li>
+<li><a href="#swagoperation">@SwagOperation</a></li>
+<li><a href="#swagrequestbody">@SwagRequestBody</a></li>
+<li><a href="#swagrequestbodycontent">@SwagRequestBodyContent</a></li>
+<li><a href="#swagresponseschema">@SwagResponseSchema</a></li>
+<li><a href="#swagpath">@SwagPath</a></li>
+<li><a href="#swagentity">@SwagEntity</a></li>
+<li><a href="#swagentityattribute">@SwagEntityAttribute</a></li>
+</ul>
+<h2 id="adding-annotations">Adding Annotations</h2>
+<p>Annotations use the <code>doctrine/annotations</code> package. To add a new Annotation simply create a new class using one of the 
+existing annotations as an example. Then add the new annotation to <code>src/Lib/AnnotationLoader.php</code>.</p>
+<h2 id="usage">Usage</h2>
+<p>You can improve this documentation by submitting PRs.</p>
+<h3 id="swagpaginator">@SwagPaginator</h3>
+<p>Method level annotation for adding <a href="https://book.cakephp.org/4/en/controllers/components/pagination.html">CakePHP Paginator</a> 
+query parameters: page, limit, sort, and direction. When specified with no arguments, Paginate.sortableFields will be 
+used to populate sort options. If sortableFields is not defined the controller actions associated Schema properties will 
+be used. You can override the defaults using the <code>sort</code> attribute. Otherwise, a simple text input is rendered 
+(<code>useSortTextInput=true</code>). </p>
+<div class="highlight"><pre><span></span><code><span class="k">use</span> <span class="nx">SwaggerBake\Lib\Annotation</span> <span class="k">as</span> <span class="nx">Swag</span><span class="p">;</span>
+<span class="sd">/**</span>
+<span class="sd"> * @Swag\SwagPaginator # default without attributes should work fine in most cases </span>
+<span class="sd"> * @Swag\SwagPaginator(sort={&quot;id&quot;,&quot;name&quot;}, useSortTextInput=false) # custom example</span>
+<span class="sd"> */</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nv">$employees</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">paginate</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">Employees</span><span class="p">);</span>
+    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">set</span><span class="p">(</span><span class="nb">compact</span><span class="p">(</span><span class="s1">&#39;employees&#39;</span><span class="p">));</span>
+    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">viewBuilder</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">setOption</span><span class="p">(</span><span class="s1">&#39;serialize&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;employees&#39;</span><span class="p">]);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>OpenAPI:</p>
+<div class="highlight"><pre><span></span><code>      <span class="nt">parameters</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">page</span>
+          <span class="nt">in</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">query</span>
+          <span class="nt">schema</span><span class="p">:</span>
+            <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">integer</span>
+        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">limit</span>
+          <span class="nt">in</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">query</span>
+          <span class="nt">schema</span><span class="p">:</span>
+            <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">integer</span>
+        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sort</span>
+          <span class="nt">in</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">query</span>
+          <span class="nt">schema</span><span class="p">:</span>
+            <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+            <span class="nt">enum</span><span class="p">:</span>
+              <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">id</span>
+              <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span>
+        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">direction</span>
+          <span class="nt">in</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">query</span>
+          <span class="nt">schema</span><span class="p">:</span>
+            <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+            <span class="nt">enum</span><span class="p">:</span> 
+              <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">asc</span>
+              <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">desc</span>
+</code></pre></div>
+
+<h3 id="swagsearch">@SwagSearch</h3>
+<p>Method level annotation for documenting search parameters using the popular <a href="https://github.com/FriendsOfCake/search">friendsofcake/search</a> plugin.</p>
+<div class="highlight"><pre><span></span><code><span class="sd">/**</span>
+<span class="sd"> * @SwaggerBake\Lib\Extension\CakeSearch\Annotation\SwagSearch(tableClass=&quot;\App\Model\Table\FilmsTable&quot;, collection=&quot;default&quot;)</span>
+<span class="sd"> */</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">request</span><span class="o">-&gt;</span><span class="na">allowMethod</span><span class="p">(</span><span class="s1">&#39;get&#39;</span><span class="p">);</span>
+    <span class="nv">$query</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">Films</span>
+        <span class="o">-&gt;</span><span class="na">find</span><span class="p">(</span><span class="s1">&#39;search&#39;</span><span class="p">,</span> <span class="p">[</span>
+            <span class="s1">&#39;search&#39;</span> <span class="o">=&gt;</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">request</span><span class="o">-&gt;</span><span class="na">getQueryParams</span><span class="p">(),</span>
+            <span class="s1">&#39;collection&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;default&#39;</span>
+        <span class="p">])</span>
+        <span class="o">-&gt;</span><span class="na">contain</span><span class="p">([</span><span class="s1">&#39;Languages&#39;</span><span class="p">]);</span>
+    <span class="nv">$films</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">paginate</span><span class="p">(</span><span class="nv">$query</span><span class="p">);</span>
+
+    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">set</span><span class="p">(</span><span class="nb">compact</span><span class="p">(</span><span class="s1">&#39;films&#39;</span><span class="p">));</span>
+    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">viewBuilder</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">setOption</span><span class="p">(</span><span class="s1">&#39;serialize&#39;</span><span class="p">,</span> <span class="s1">&#39;films&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Friends Of Cake Search Filter:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="k">declare</span><span class="p">(</span><span class="nx">strict_types</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
+
+<span class="k">namespace</span> <span class="nx">App\Model\Filter</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Search\Model\Filter\FilterCollection</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">FilmsCollection</span> <span class="k">extends</span> <span class="nx">FilterCollection</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">initialize</span><span class="p">()</span><span class="o">:</span> <span class="nx">void</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span>
+            <span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;Search.Like&#39;</span><span class="p">,</span> <span class="p">[</span>
+                <span class="s1">&#39;before&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+                <span class="s1">&#39;after&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+                <span class="s1">&#39;mode&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;or&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;comparison&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;LIKE&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;wildcardAny&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;*&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;wildcardOne&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;?&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;fields&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">],</span>
+            <span class="p">])</span>
+            <span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;rating&#39;</span><span class="p">,</span> <span class="s1">&#39;Search.Value&#39;</span><span class="p">,</span> <span class="p">[</span>
+                <span class="s1">&#39;before&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+                <span class="s1">&#39;after&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+                <span class="s1">&#39;mode&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;or&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;wildcardAny&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;*&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;wildcardOne&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;?&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;fields&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;rating&#39;</span><span class="p">],</span>
+            <span class="p">]);</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+<p>OpenAPI:</p>
+<div class="highlight"><pre><span></span><code>      <span class="nt">parameters</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">title</span>
+          <span class="nt">in</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">query</span>
+          <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Like title</span>
+          <span class="nt">schema</span><span class="p">:</span>
+            <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rating</span>
+          <span class="nt">in</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">query</span>
+          <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Value rating</span>
+          <span class="nt">schema</span><span class="p">:</span>
+            <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+</code></pre></div>
+
+<h3 id="swagquery">@SwagQuery</h3>
+<p>Method level annotation for adding query parameters. <a href="SwagQuery.php">Read the comments</a> 
+to see all supported OpenAPI properties.</p>
+<div class="highlight"><pre><span></span><code><span class="sd">/**</span>
+<span class="sd"> * @Swag\SwagQuery(name=&quot;one&quot;, required=true, description=&quot;example description&quot;)</span>
+<span class="sd"> * @Swag\SwagQuery(name=&quot;two&quot;, type=&quot;string&quot;, explode=true)</span>
+<span class="sd"> * @Swag\SwagQuery(name=&quot;three&quot;, enum={&quot;A&quot;,&quot;B&quot;,&quot;C&quot;}, deprecated=true)</span>
+<span class="sd"> * @Swag\SwagQuery(ref=&quot;#/x-my-project/components/parameters/my-parameter&quot;)</span>
+<span class="sd"> */</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">()</span> <span class="p">{}</span>
+</code></pre></div>
+
+<p>OpenAPI:</p>
+<div class="highlight"><pre><span></span><code>      <span class="nt">parameters</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">one</span>
+          <span class="nt">in</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">query</span>
+          <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">example description</span>
+          <span class="nt">schema</span><span class="p">:</span>
+            <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">two</span>
+          <span class="nt">in</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">query</span>
+          <span class="nt">explode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+          <span class="nt">schema</span><span class="p">:</span>
+            <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">three</span>
+          <span class="nt">in</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">query</span>
+          <span class="nt">explode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+          <span class="nt">deprecated</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+          <span class="nt">schema</span><span class="p">:</span>
+            <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+            <span class="nt">enum</span><span class="p">:</span>
+              <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">A</span>
+              <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">B</span>
+              <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">C</span>
+        <span class="p p-Indicator">-</span> <span class="nt">$ref</span><span class="p">:</span> <span class="c1">#/x-my-project/components/parameters/my-parameter</span>
+</code></pre></div>
+
+<h3 id="swagform">@SwagForm</h3>
+<p>Method level annotation for adding form data fields. <a href="SwagForm.php">Read the comments</a> 
+to see all supported OpenAPI properties.</p>
+<div class="highlight"><pre><span></span><code><span class="sd">/**</span>
+<span class="sd"> * @Swag\SwagForm(name=&quot;one&quot;, type=&quot;string&quot;, description=&quot;example&quot;, required=true, enum={&quot;A&quot;,&quot;B&quot;})</span>
+<span class="sd"> * @Swag\SwagForm(name=&quot;two&quot;, type=&quot;integer&quot;, minimum=10, maximum=100, multipleOf=10)</span>
+<span class="sd"> * @Swag\SwagForm(name=&quot;three&quot;, type=&quot;string&quot;, minLength=8, maxLength=64, pattern=&quot;[a-zA-Z]&quot;)</span>
+<span class="sd"> */</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">add</span><span class="p">()</span> <span class="p">{}</span>
+</code></pre></div>
+
+<p>OpenAPI:</p>
+<div class="highlight"><pre><span></span><code>      <span class="nt">requestBody</span><span class="p">:</span>
+        <span class="nt">description</span><span class="p">:</span> <span class="s">&#39;&#39;</span>
+        <span class="nt">content</span><span class="p">:</span>
+          <span class="nt">application/x-www-form-urlencoded</span><span class="p">:</span>
+            <span class="nt">schema</span><span class="p">:</span>
+              <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Actor Entity</span>
+              <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">object</span>
+              <span class="nt">properties</span><span class="p">:</span>
+                <span class="nt">one</span><span class="p">:</span>
+                  <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                  <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">example</span>
+                  <span class="nt">required</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+                  <span class="nt">enum</span><span class="p">:</span>
+                    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">A</span>
+                    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">B</span>
+                <span class="nt">two</span><span class="p">:</span>
+                  <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">integer</span>
+                  <span class="nt">minimum</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">10</span>
+                  <span class="nt">maximum</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">100</span>
+                  <span class="nt">multipleOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">10</span>
+                <span class="nt">three</span><span class="p">:</span>
+                  <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                  <span class="nt">minLength</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">8</span>
+                  <span class="nt">maxLength</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">64</span>
+                  <span class="nt">pattern</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">a-zA-Z</span><span class="p p-Indicator">]</span>
+</code></pre></div>
+
+<h3 id="swagdto">@SwagDto</h3>
+<p>Method level annotation for building query or form parameters from a DataTransferObject. DTOs are more than just a 
+best practice. Using them with SwaggerBake greatly reduces the amount of annotations you need to write. Consider 
+using a DTO in place of SwagQuery or SwagForm. SwagDto uses either SwagDtoProperty or your existing Doc Blocks to 
+build swagger query and post parameters.</p>
+<div class="highlight"><pre><span></span><code><span class="sd">/**</span>
+<span class="sd"> * @Swag\SwagDto(class=&quot;\App\Dto\ActorDto&quot;)</span>
+<span class="sd"> */</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">()</span> <span class="p">{}</span>
+</code></pre></div>
+
+<h3 id="swagdtoquery">@SwagDtoQuery</h3>
+<p>Property level annotation for use in your SwagDto classes. <a href="SwagDtoQuery.php">Read the comments</a> to 
+see all supported properties.</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ActorDto</span> <span class="p">{</span>
+     <span class="sd">/**</span>
+<span class="sd">      * @SwagDtoQuery(name=&quot;example&quot;, type=&quot;string&quot;, required=true, enum={&quot;A&quot;,&quot;B&quot;})</span>
+<span class="sd">      */</span>
+    <span class="k">private</span> <span class="nv">$example</span><span class="p">;</span>
+</code></pre></div>
+
+<h3 id="swagdtoform">@SwagDtoForm</h3>
+<p>Property level annotation for use in your SwagDto classes. <a href="SwagDtoForm.php">Read the comments</a> to 
+see all supported properties.</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ActorDto</span> <span class="p">{</span>
+     <span class="sd">/**</span>
+<span class="sd">      * @SwagDtoForm(name=&quot;example&quot;, type=&quot;integer&quot;, required=true, minimum=10, maximum=100)</span>
+<span class="sd">      */</span>
+    <span class="k">private</span> <span class="nv">$example</span><span class="p">;</span>
+</code></pre></div>
+
+<h3 id="swagheader">@SwagHeader</h3>
+<p>Method level annotation for adding header parameters. <a href="SwagHeader.php">Read the comments</a> 
+to see all supported OpenAPI properties.</p>
+<div class="highlight"><pre><span></span><code><span class="sd">/**</span>
+<span class="sd"> * @Swag\SwagHeader(name=&quot;X-HEAD-ATTRIBUTE&quot;, type=&quot;string&quot;, description=&quot;example&quot;)</span>
+<span class="sd"> * @Swag\SwagHeader(ref=&quot;#/x-my-project/components/parameters/my-header&quot;) </span>
+<span class="sd"> */</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">()</span> <span class="p">{}</span>
+</code></pre></div>
+
+<p>OpenAPI:</p>
+<div class="highlight"><pre><span></span><code>     <span class="nt">parameters</span><span class="p">:</span>
+       <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">X-HEAD-ATTRIBUTE</span>
+         <span class="nt">in</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">header</span>
+         <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">summary</span>
+         <span class="nt">schema</span><span class="p">:</span>
+           <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+       <span class="p p-Indicator">-</span> <span class="nt">$ref</span><span class="p">:</span> <span class="c1">#/x-my-project/components/parameters/my-header</span>
+</code></pre></div>
+
+<h3 id="swagpathparameter">@SwagPathParameter</h3>
+<p>Method level annotation for modifying path parameters. <a href="SwagPathParameter.php">Read the comments</a> 
+to see all supported OpenAPI properties. This is for modifying existing path parameters only. Path parameters must 
+first be defined in your routes file.</p>
+<div class="highlight"><pre><span></span><code><span class="sd">/**</span>
+<span class="sd"> * @Swag\SwagPathParameter(name=&quot;id&quot;, type=&quot;integer&quot;, format=&quot;int64&quot;, description=&quot;ID&quot;)</span>
+<span class="sd"> */</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">view</span><span class="p">(</span><span class="nv">$id</span><span class="p">)</span> <span class="p">{}</span>
+</code></pre></div>
+
+<p>OpenAPI: </p>
+<div class="highlight"><pre><span></span><code>        <span class="nt">parameters</span><span class="p">:</span>
+          <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">id</span>
+            <span class="nt">required</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+            <span class="nt">schema</span><span class="p">:</span>
+              <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ID</span>
+              <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">integer</span>
+              <span class="nt">format</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">int64</span>
+</code></pre></div>
+
+<h3 id="swagsecurity">@SwagSecurity</h3>
+<p>Method level annotation for adding authentication requirements. This annotation takes precedence over settings that 
+SwaggerBake gathers from AuthenticationComponent. See the main documentation for more information.</p>
+<div class="highlight"><pre><span></span><code><span class="sd">/**</span>
+<span class="sd"> * @Swag\SwagSecurity(name=&quot;BearerAuth&quot;, scopes={&quot;Read&quot;,&quot;Write&quot;})</span>
+<span class="sd"> */</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">()</span> <span class="p">{}</span>
+</code></pre></div>
+
+<h3 id="swagoperation">@SwagOperation</h3>
+<p>Method level annotation for OpenApi Operations. <a href="SwagOperation.php">Read the comments</a> for examples 
+and further explanations.</p>
+<div class="highlight"><pre><span></span><code><span class="sd">/**</span>
+<span class="sd"> * @Swag\SwagOperation(isVisible=true, tagNames={&quot;Custom&quot;,&quot;Tags&quot;}, showPut=true)</span>
+<span class="sd"> */</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">()</span> <span class="p">{}</span>
+</code></pre></div>
+
+<p>OpenAPI:</p>
+<div class="highlight"><pre><span></span><code>  <span class="nt">put</span><span class="p">:</span>
+    <span class="nt">tags</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Custom</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Tags</span>
+</code></pre></div>
+
+<h3 id="swagrequestbody">@SwagRequestBody</h3>
+<p>Method level annotation for describing request body. Set ignoreCakeSchema for full control over request body.</p>
+<div class="highlight"><pre><span></span><code><span class="sd">/**</span>
+<span class="sd"> * @Swag\SwagRequestBody(description=&quot;my description&quot;, required=true, ignoreCakeSchema=true)</span>
+<span class="sd"> */</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">()</span> <span class="p">{}</span>
+</code></pre></div>
+
+<h3 id="swagrequestbodycontent">@SwagRequestBodyContent</h3>
+<p>Method level annotation for describing custom content in request body. The <code>mimeTypes</code> parameter is optional. If empty, 
+all mimeTypes defined as <code>requestAccepts</code> in your swagger_bake.php will be used. This will only show writeable 
+properties.</p>
+<ul>
+<li><code>mimeType</code> has been deprecated in &gt;= v1.5, use array form with <code>mimeTypes</code></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="sd">/**</span>
+<span class="sd"> * @Swag\SwagRequestBodyContent(refEntity=&quot;#/components/schemas/Actor&quot;, mimeTypes={&quot;application/json&quot;})</span>
+<span class="sd"> */</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">()</span> <span class="p">{}</span>
+</code></pre></div>
+
+<p>OpenAPI:</p>
+<div class="highlight"><pre><span></span><code>      <span class="nt">requestBody</span><span class="p">:</span>
+        <span class="nt">description</span><span class="p">:</span> <span class="s">&#39;&#39;</span>
+        <span class="nt">content</span><span class="p">:</span>
+          <span class="nt">application/json</span><span class="p">:</span>
+            <span class="nt">schema</span><span class="p">:</span>
+              <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Actor Entity</span>
+              <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">object</span>
+              <span class="nt">properties</span><span class="p">:</span>
+                <span class="nt">first_name</span><span class="p">:</span>
+                  <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                  <span class="nt">minLength</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+                  <span class="nt">maxLength</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">45</span>
+                <span class="nt">last_name</span><span class="p">:</span>
+                  <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                  <span class="nt">minLength</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+                  <span class="nt">maxLength</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">45</span>
+</code></pre></div>
+
+<h3 id="swagresponseschema">@SwagResponseSchema</h3>
+<p>Method level annotation for defining response schema. <a href="SwagResponseSchema.php">Read the comments</a> to 
+see all supported properties and additional examples.</p>
+<ul>
+<li><code>mimeType</code> is deprecated in &gt;= v1.5, use <code>mimeTypes</code> as an array.</li>
+<li><code>httpCode</code> is deprecated in &gt;= v1.3, use <code>statusCode</code> </li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="sd">/**</span>
+<span class="sd"> * @Swag\SwagResponseSchema(refEntity=&quot;#/components/schemas/Actor&quot;, description=&quot;Summary&quot;, statusCode=&quot;200&quot;)</span>
+<span class="sd"> */</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">view</span><span class="p">()</span> <span class="p">{}</span>
+</code></pre></div>
+
+<p>OpenAPI:</p>
+<div class="highlight"><pre><span></span><code>     <span class="nt">responses</span><span class="p">:</span>
+       <span class="s">&#39;200&#39;</span><span class="p p-Indicator">:</span>                                    <span class="c1"># note: default is 200</span>
+         <span class="nt">content</span><span class="p">:</span>
+           <span class="nt">application/json</span><span class="p">:</span>                     <span class="c1"># note: uses your default mime type since none was specified</span>
+             <span class="nt">schema</span><span class="p">:</span>
+               <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">My summary</span>
+               <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">object</span>                      <span class="c1"># note: `object` is default when using refEntity</span>
+               <span class="nt">$ref</span><span class="p">:</span> <span class="s">&#39;#/components/schemas/Actor&#39;</span>
+</code></pre></div>
+
+<p>Defining a single mimeType and 400-409 status code range:</p>
+<div class="highlight"><pre><span></span><code><span class="sd">/**</span>
+<span class="sd"> * @Swag\SwagResponseSchema(refEntity=&quot;#/components/schemas/Exception&quot;, mimeTypes={&quot;application/xml&quot;}, statusCode=&quot;40x&quot;)</span>
+<span class="sd"> */</span>
+</code></pre></div>
+
+<p>OpenAPI:</p>
+<div class="highlight"><pre><span></span><code>       <span class="s">&#39;40x&#39;</span><span class="p p-Indicator">:</span>
+         <span class="nt">content</span><span class="p">:</span>
+           <span class="nt">application/xml</span><span class="p">:</span>
+             <span class="nt">schema</span><span class="p">:</span>
+               <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">object</span>
+               <span class="nt">items</span><span class="p">:</span>
+                 <span class="nt">$ref</span><span class="p">:</span> <span class="s">&#39;#/components/schemas/Exception&#39;</span>
+</code></pre></div>
+
+<p>Defining an array of objects:</p>
+<div class="highlight"><pre><span></span><code><span class="sd">/**</span>
+<span class="sd"> * @Swag\SwagResponseSchema(schemaItems={&quot;$ref&quot;=&quot;#/components/schemas/Actor&quot;})</span>
+<span class="sd"> */</span>
+</code></pre></div>
+
+<p>OpenAPI:</p>
+<div class="highlight"><pre><span></span><code>       <span class="s">&#39;200&#39;</span><span class="p p-Indicator">:</span>
+         <span class="nt">content</span><span class="p">:</span>
+           <span class="nt">application/json</span><span class="p">:</span>
+             <span class="nt">schema</span><span class="p">:</span>
+               <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">array</span>
+               <span class="nt">items</span><span class="p">:</span>
+                 <span class="nt">$ref</span><span class="p">:</span> <span class="s">&#39;#/components/schemas/Actor&#39;</span>
+</code></pre></div>
+
+<h3 id="swagpath">@SwagPath</h3>
+<p>Class level annotation for exposing controllers to Swagger UI. You can hide entire controllers with this annotation.</p>
+<div class="highlight"><pre><span></span><code><span class="sd">/**</span>
+<span class="sd"> * @Swag\SwagPath(isVisible=false, description=&quot;optional description&quot;, summary=&quot;operational summary&quot;)</span>
+<span class="sd"> */</span>
+<span class="k">class</span> <span class="nc">UsersController</span> <span class="k">extends</span> <span class="nx">AppController</span> <span class="p">{</span>
+</code></pre></div>
+
+<h3 id="swagentity">@SwagEntity</h3>
+<p>Class level annotation for exposing entities to Swagger UI. By default, all entities with routes will display as Swagger 
+schema. You can hide a schema or display a schema that does not have an associated route.</p>
+<div class="highlight"><pre><span></span><code><span class="sd">/**</span>
+<span class="sd"> * @Swag\SwagEntity(isVisible=false, title=&quot;optional title&quot;, description=&quot;optional description&quot;)</span>
+<span class="sd"> */</span>
+<span class="k">class</span> <span class="nc">Employee</span> <span class="k">extends</span> <span class="nx">Entity</span> <span class="p">{</span>
+</code></pre></div>
+
+<h3 id="swagentityattribute">@SwagEntityAttribute</h3>
+<p>Class level annotation for customizing Schema Attributes. <a href="SwagEntityAttribute.php">Read the comments</a> 
+to see all supported OpenAPI properties. Note that the attribute does not have to exist in your entity. You can add 
+adhoc attributes as needed or <a href="https://book.cakephp.org/4/en/orm/entities.html#creating-virtual-fields">Virtual Fields</a>.</p>
+<div class="highlight"><pre><span></span><code><span class="sd">/**</span>
+<span class="sd"> * @Swag\SwagEntityAttribute(name=&quot;example_one&quot;, type=&quot;string&quot;, minLength=5, maxLength=10)</span>
+<span class="sd"> * @Swag\SwagEntityAttribute(name=&quot;example_two&quot;, type=&quot;string&quot;, enum={&quot;PG&quot;,&quot;R&quot;}, required=true)</span>
+<span class="sd"> * @Swag\SwagEntityAttribute(name=&quot;example_virtual_field&quot;, type=&quot;string&quot;, readOnly=true)</span>
+<span class="sd"> */</span>
+<span class="k">class</span> <span class="nc">Employee</span> <span class="k">extends</span> <span class="nx">Entity</span> <span class="p">{</span>
+</code></pre></div>
+
+<p>OpenAPI:</p>
+<p><code>yaml
+        example_one:
+          type: string
+          minLength: 5
+          maxLength: 10
+        example_two:
+          type: string
+          enum:
+            - PG
+            - R
+          required: true
+        example_virtual_field:
+          type: string
+          readOnly: true</code></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/vendor.2d1db4bd.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.6627ddf3.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../../..",
+          features: ['navigation.expand'],
+          search: Object.assign({
+            worker: "../../../../assets/javascripts/worker/search.5eca75d3.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

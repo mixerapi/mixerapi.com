@@ -1,0 +1,24 @@
+[submodule "bake"]
+	path = bake
+	url = https://github.com/mixerapi/bake
+[submodule "hal-view"]
+	path = hal-view
+	url = https://github.com/mixerapi/hal-view
+[submodule "json-ld-view"]
+	path = json-ld-view
+	url = https://github.com/mixerapi/json-ld-view
+[submodule "exception-render"]
+	path = exception-render
+	url = https://github.com/mixerapi/exception-render
+[submodule "collection-view"]
+	path = collection-view
+	url = https://github.com/mixerapi/collection-view
+[submodule "cakephp-swagger-bake"]
+	path = cakephp-swagger-bake
+	url = https://github.com/cnizzardini/cakephp-swagger-bake
+[submodule "rest"]
+	path = rest
+	url = https://github.com/mixerapi/rest
+[submodule "mixerapi"]
+	path = mixerapi
+	url = https://github.com/mixerapi/mixerapi
