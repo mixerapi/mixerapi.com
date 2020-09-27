@@ -1,3 +1,4 @@
 .idea
-site/
-/docs_/
+site/*
+!*/site/_assets/*
+docs_/

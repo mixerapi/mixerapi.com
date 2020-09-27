@@ -24,7 +24,18 @@ Set the submodule to recurse automatically so you can easily `git pull` updates 
 git config submodule.recurse true
 ```
 
-## Running
+When repositories change you may need to run the following:
+
+```console
+git submodule update --remote
+```
+
+## Docker Image
+
+The docker image used by mixerapi is here: https://hub.docker.com/systematical/mixerapidocs and can be seen locally 
+in [Dockerfile](Dockerfile).
+
+### Running
 
 The site can be run via docker run on your localhost. This includes a live reload as docs and configs change. You can 
 browse the site via `http://localhost:8000/` by default.
@@ -33,7 +44,7 @@ browse the site via `http://localhost:8000/` by default.
 docker run --rm -it --network=host -v ${PWD}:/docs --user $(id -u):$(id -g) systematical/mixerapidocs:latest
 ```
 
-## Building
+### Building
 
 Build will generate `site/`.
 
