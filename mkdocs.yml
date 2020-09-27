@@ -11,8 +11,6 @@ repo_url: https://github.com/mixerapi/mixerapi
 edit_uri: ''
 theme:
   name: material
-  icon:
-    logo: material/book-open-page-variant
   palette:
     scheme: default
     primary: red
@@ -22,6 +20,8 @@ theme:
     code: Roboto Mono
   features:
   - navigation.expand
+  favicon: images/favicon.png
+  logo: assets/logo.png
 nav:
 - Baking Controllers: ./bake
 - Exception Rendering: ./exception-render
@@ -47,3 +47,11 @@ markdown_extensions:
     linenums_style: pymdownx-inline
 - pymdownx.superfences:
     preserve_tabs: true
+extra:
+  social:
+  - icon: fontawesome/brands/slack
+    link: https://cakesf.slack.com/
+  - icon: fontawesome/brands/twitter
+    link: https://twitter.com/mixerapi
+  - icon: fontawesome/brands/github
+    link: https://github.com/mixerapi
