@@ -9,7 +9,13 @@ can be added in the `docs/` directory and mapped to the navigation in `mkdocs.ym
 Clone this repo.
 
 ```console
-git clone git@github.com:mixerapi/mixerapi.com.git .
+git clone git@github.com:mixerapi/mixerapi.com.git mixerapi.com
+```
+
+Pull submodules.
+
+```console
+git submodule update --init
 ```
 
 Set the submodule to recurse automatically so you can easily `git pull` updates to the submodules.

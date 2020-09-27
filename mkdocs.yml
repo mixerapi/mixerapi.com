@@ -1,9 +1,11 @@
 site_name: MixerAPI
+site_description: MixerAPI streamlines development of RESTful APIs for your CakePHP project
 docs_dir: docs
 plugins:
 - simple
 - search
 repo_url: https://github.com/mixerapi/mixerapi
+edit_uri: ''
 theme:
   name: material
   icon:
