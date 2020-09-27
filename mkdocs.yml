@@ -1,7 +1,9 @@
 site_name: MixerAPI
 docs_dir: docs
 plugins:
-- simple
+- simple:
+    include_files:
+    - .svg
 - search
 site_description: MixerAPI streamlines development of RESTful APIs for your CakePHP
   project
