@@ -23,15 +23,22 @@ theme:
   favicon: images/favicon.png
   logo: assets/logo.png
 nav:
-- Baking Controllers: ./bake
-- Exception Rendering: ./exception-render
-- OpenAPI (Swagger): ./cakephp-swagger-bake
+- Install: /install
+- Getting Started: /getting-started
+- Baking Controllers: /bake
+- Exception Rendering: /exception-render
+- OpenAPI (Swagger):
+  - Getting Started: /cakephp-swagger-bake
+  - Annotations: /cakephp-swagger-bake/src/Lib/Annotation
+  - Extentions: /cakephp-swagger-bake/src/Lib/Extension
 - Response Formats:
-  - JSON / XML: ./collection-view
-  - HAL+JSON: ./hal-view
-  - JSON-LD: ./json-ld-view
-- RESTful Routes: ./rest
+  - JSON / XML: /collection-view
+  - HAL+JSON: /hal-view
+  - JSON-LD: /json-ld-view
+- RESTful Routes: /rest
+- Search: /friends-of-cake-search
 markdown_extensions:
+- attr_list
 - admonition
 - pymdownx.details
 - pymdownx.highlight:

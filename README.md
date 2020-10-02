@@ -37,8 +37,8 @@ in [Dockerfile](Dockerfile).
 
 ### Running
 
-The site can be run via docker run on your localhost. This includes a live reload as docs and configs change. You can 
-browse the site via `http://localhost:8000/` by default.
+The site can be run via `./run.sh` (see full command below) on your localhost. This includes a live reload as docs and 
+configs change. You can browse the site via `http://localhost:8000/` by default.
 
 ```console
 docker run --rm -it --network=host -v ${PWD}:/docs --user $(id -u):$(id -g) systematical/mixerapidocs:latest
@@ -46,7 +46,7 @@ docker run --rm -it --network=host -v ${PWD}:/docs --user $(id -u):$(id -g) syst
 
 ### Building
 
-Build will generate `site/`.
+To build the site run `./build.sh` which runs the command below.
 
 ```console
 docker run --rm -it --network=host -v ${PWD}:/docs --user $(id -u):$(id -g) systematical/mixerapidocs:latest mkdocs build
