@@ -24,7 +24,7 @@ theme:
   logo: assets/logo.png
 nav:
 - Install: /install
-- Getting Started: /getting-started
+- Getting Started: /workflow
 - Baking Controllers: /bake
 - Exception Rendering: /exception-render
 - OpenAPI (Swagger):

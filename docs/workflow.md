@@ -1,10 +1,10 @@
-# Getting Started
+# Worfklow
 
 MixerAPI will not change your CakePHP workflows and is designed to augment your Cake development experience. Whether 
 its Models, Controllers, Authentication, Authorization, Pagination, Events or anything else you love about CakePHP — 
 MixerAPI is built to power the web, not get you caught in one.
 
-## Development Workflow
+## Development
 
 Assuming your initial planning is complete, a typical workflow for building your APIs would involve, but not be 
 limited to:
