@@ -30,8 +30,8 @@ the generated OpenAPI JSON into Postman as well.
 If you find bugs or errors in the documentation, please report them to the 
 [plugins repository](https://github.com/mixerapi) (or submit a PR).
 
-- MixerAPI Live Demo
-- MixerAPI Demo Source Code
+- [MixerAPI Live Demo](https://demo.mixerapi.com)
+- [MixerAPI Demo Source Code](https://github.com/mixerapi/demo)
 - [CakePHP Documentation](https://book.cakephp.org/4/en/index.html)
 - [CakePHP Code API](https://api.cakephp.org/4.0/)
 - [CakePHP Slack](https://cakesf.slack.com/)
