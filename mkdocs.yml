@@ -30,7 +30,7 @@ nav:
 - OpenAPI (Swagger):
   - Getting Started: /cakephp-swagger-bake
   - Annotations: /cakephp-swagger-bake/docs/annotations
-  - Extentions: /cakephp-swagger-bake/docs/extensions
+  - Extensions: /cakephp-swagger-bake/docs/extensions
 - Response Formats:
   - JSON / XML: /collection-view
   - HAL+JSON: /hal-view
