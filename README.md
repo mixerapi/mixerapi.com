@@ -52,7 +52,7 @@ To build the site run `./build.sh` which runs the command below.
 docker run --rm -it --network=host -v ${PWD}:/docs --user $(id -u):$(id -g) systematical/mixerapidocs:latest mkdocs build
 ```
 
-## Adding new plugins
+## Adding new MixerAPI plugins
 
 Add the submodule
 
@@ -61,3 +61,30 @@ git submodule add https://github.com/mixerapi/my-new-plugin
 ```
 
 Then add it to the nav in `mkdocs.yml`
+
+## Production Web Server Settings
+
+Setup on production is pretty standard. 404 errors need to be pointed at `404.php` which has some custom redirect 
+logic in it. FPM needs to be informed to use this as well with `ProxyErrorOverride`. Aside from handling 404 errors, 
+the site is static and does not need PHP.
+
+```
+# apache virtualhost
+<VirtualHost *:443>
+    ServerName mixerapi.com
+    DocumentRoot /var/www/mixerapi.com/site
+    <Directory /var/www/mixerapi.com/site>
+        Options Indexes FollowSymLinks MultiViews
+        AllowOverride All
+        Order allow,deny
+        allow from all
+    </Directory>
+    <FilesMatch \.php$>
+        SetHandler "proxy:unix:/var/run/php/php7.4-fpm.sock|fcgi://localhost/"
+        ProxyErrorOverride on
+    </FilesMatch>
+    ErrorDocument 404 /404.php
+    SSLEngine On
+    # SSL settings here
+</VirtualHost>
+```
