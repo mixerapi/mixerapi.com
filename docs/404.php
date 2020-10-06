@@ -16,15 +16,26 @@ $packages = [
     'json-ld-view',
     'rest',
 ];
+
 if ($dir == 'cakephp-swagger-bake') {
     $url = 'https://github.com/cnizzardini/cakephp-swagger-bake/blob/master/';
     array_shift($pieces);
+
+    if (reset($pieces) == 'docs') {
+        array_shift($pieces);
+    }
+
     $url.= implode('/', $pieces);
     header("Location: $url",TRUE,302);
     exit(0);
 } else if (in_array($dir, $packages)) {
     $url = "https://github.com/mixerapi/$dir/blob/master/";
     array_shift($pieces);
+
+    if (reset($pieces) == 'docs') {
+        array_shift($pieces);
+    }
+
     $url.= implode('/', $pieces);
     header("Location: $url",TRUE,302);
     exit(0);
