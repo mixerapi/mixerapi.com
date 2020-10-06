@@ -24,6 +24,9 @@ if ($dir == 'cakephp-swagger-bake') {
     if (reset($pieces) == 'docs') {
         array_shift($pieces);
     }
+    if (reset($pieces) == 'extensions') {
+        array_shift($pieces);
+    }
 
     $url.= implode('/', $pieces);
     header("Location: $url",TRUE,302);
