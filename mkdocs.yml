@@ -1,4 +1,4 @@
-site_name: MixerAPI
+site_name: MixerAPI - Streamline RESTFul API Development
 docs_dir: docs
 plugins:
 - simple:
