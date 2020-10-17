@@ -49,23 +49,10 @@ public function initialize(array $config): void
     $this->addBehavior('Search.Search');
     // ...other code
 }
-```
+``` 
 
-Load the Search component in your controllers initialize method:
-
-```php
-public function initialize() : void
-{
-    // ... other code
-    $this->loadComponent('Search.Search', [
-        'actions' => ['index'],
-    ]);
-    // ... other code
-}
-```    
-
-Modify your controller action to use the Search behavior and optionally annotate with SwagSearch to inform OpenAPI 
-about the search options:
+Modify your controller action to initialize the Search component, use the Search behavior and optionally annotate with 
+SwagSearch to inform OpenAPI about the search options:
 
 ```php
 <?php
@@ -77,6 +64,16 @@ use SwaggerBake\Lib\Extension\CakeSearch\Annotation\SwagSearch;
 
 class ActorsController extends AppController
 {
+    public function initialize() : void
+    {
+        parent::initialize();
+        // ... other code
+        $this->loadComponent('Search.Search', [
+            'actions' => ['index'],
+        ]);
+        // ... other code
+    }
+
     /**
      * Index method
      *
