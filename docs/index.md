@@ -1,3 +1,7 @@
+---
+title: MixerAPI - Streamline RESTful API Development
+---
+
 # MixerAPI / Streamline API Development
 
 !!! warning ""
