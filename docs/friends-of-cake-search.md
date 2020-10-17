@@ -6,7 +6,7 @@ Please visit the [documentation](https://github.com/FriendsOfCake/search/tree/ma
 !!! info ""
     Search is easy to integrate with your API and works out of the box for HTTP GET requests. You can document your APIs 
     search parameters in OpenAPI using the `@SwagSearch` annotation. Read more 
-    [here](/cakephp-swagger-bake/src/Lib/Annotation/#swagsearch).
+    [here](/cakephp-swagger-bake/docs/annotations/#swagsearch).
     
     
 ## Quick Example
