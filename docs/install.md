@@ -15,7 +15,6 @@ latest version of CakePHP and MixerAPI. The App Skeleton also comes with an opti
 composer create-project -s dev --prefer-dist mixerapi/app 
 ```
 
-
 ## Composer
 
 If you have an existing application or feel comfortable doing things yourself then you can install with composer.
@@ -26,6 +25,18 @@ MixerAPI can be installed in your existing CakePHP project using
 
 ```console
 composer require mixerapi/mixerapi
+bin/cake plugin load MixerApi
+```
+
+Running `plugin load MixerApi` simply adds the plugin to your `Application::boostrap` like so:
+
+```php
+# src/Application.php
+public function bootstrap(): void
+{
+    // other logic...
+    $this->addPlugin('MixerApi');
+}
 ```
 
 ## Setup
