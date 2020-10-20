@@ -1,5 +1,5 @@
 
-name: test
+name: deploy
 on: push
 
 jobs:
@@ -13,7 +13,7 @@ jobs:
             cd /var/www/mixerapi.com
             ./deploy.sh
           host: mixerapi.com
-          user: root
+          user: ${{ secrets.MIXERAPI_COM_USER}}
           key: ${{ secrets.MIXERAPI_COM_PUBLIC_KEY}}
 #          pass: ${{ secrets.PASS }}
           args: "-tt -vvv"
