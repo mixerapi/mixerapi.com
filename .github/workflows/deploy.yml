@@ -10,5 +10,6 @@ jobs:
       uses: appleboy/ssh-action@master
       with:
         host: mixerapi.com
-        key: ${{ secrets.MIXERAPI_COM_PUBLIC_KEY}}
+        username: ${{ secrets.MIXERAPI_COM_USER}}
+        key: ${{ secrets.MIXERAPI_COM_PRIVATE_KEY}}
         script: whoami
