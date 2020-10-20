@@ -48,3 +48,9 @@ getting started page afterwards.
 
 [Install Guide](/install){: .md-button .md-button--primary }
 [Workflow](/workflow){: .md-button }
+
+## Contributing
+
+Contributions are welcome to any of the [MixerAPI plugins](https://github.com/mixerapi). This documentation can be 
+improved by modifying the README.md files for plugins, docs directory (if it exists for the plugin), and via  
+[https://github.com/mixerapi/mixerapi.com](https://github.com/mixerapi/mixerapi.com) which is powered by MkDocs.
