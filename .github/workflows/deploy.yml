@@ -11,4 +11,4 @@ jobs:
       with:
         host: mixerapi.com
         key: ${{ secrets.MIXERAPI_COM_PUBLIC_KEY}}
-        script: ${{ secrets.MIXERAPI_COM_DEPLOY_CMD}}
+        script: whoami
