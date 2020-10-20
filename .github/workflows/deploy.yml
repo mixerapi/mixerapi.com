@@ -15,5 +15,6 @@ jobs:
           host: mixerapi.com
           user: ${{ secrets.MIXERAPI_COM_USER}}
           key: ${{ secrets.MIXERAPI_COM_PUBLIC_KEY}}
+          ssh-disable-host-key-checking: true
 #          pass: ${{ secrets.PASS }}
           args: "-tt -vvv"
