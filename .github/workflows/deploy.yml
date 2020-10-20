@@ -1,18 +1,14 @@
-
-name: deploy
+name: deploy via ssh
 on: push
-
 jobs:
+
   build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy mixerapi.com
-        uses: fifsky/ssh-action@master
-        with:
-          command: |
-            cd /var/www/mixerapi.com
-            ./deploy.sh
-          host: mixerapi.com
-          user: ${{ secrets.MIXERAPI_COM_USER}}
-          key: ${{ secrets.MIXERAPI_COM_PUBLIC_KEY}}
-          args: "-tt -vvv"
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@master
+      with:
+        host: mixerapi.com
+        key: ${{ secrets.MIXERAPI_COM_PUBLIC_KEY}}
+        script: ${{ secrets.MIXERAPI_COM_DEPLOY_CMD}}
