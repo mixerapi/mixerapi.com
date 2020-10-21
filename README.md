@@ -62,11 +62,9 @@ git submodule add https://github.com/mixerapi/my-new-plugin
 
 Then add it to the nav in `mkdocs.yml`
 
-## Production Web Server Settings
+## Web Server
 
-Setup on production is pretty standard. 404 errors need to be pointed at `404.php` which has some custom redirect 
-logic in it. FPM needs to be informed to use this as well with `ProxyErrorOverride`. Aside from handling 404 errors, 
-the site is static and does not need PHP.
+404 errors need to be pointed at `404.php` which has some custom redirect logic in it. FPM needs to be informed to use this as well with `ProxyErrorOverride`. Aside from handling 404 errors, the site is static and does not need PHP. Example for Apache:
 
 ```
 # apache virtualhost
@@ -74,7 +72,7 @@ the site is static and does not need PHP.
     ServerName mixerapi.com
     DocumentRoot /var/www/mixerapi.com/site
     <Directory /var/www/mixerapi.com/site>
-        Options Indexes FollowSymLinks MultiViews
+        Options -Indexes FollowSymLinks MultiViews
         AllowOverride All
         Order allow,deny
         allow from all
