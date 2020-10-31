@@ -14,4 +14,9 @@ run:
 
 build:
 	make update
+	docker run --rm -it --network=host -v ${PWD}:/docs --user $(id -u):$(id -g) systematical/mixerapidocs:latest mkdocs build
+
+deploy:
+    git pull
+	make update
 	docker run --rm --network=host -v ${PWD}:/docs --user $(id -u):$(id -g) systematical/mixerapidocs:latest mkdocs build
