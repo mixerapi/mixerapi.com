@@ -22,7 +22,7 @@ This includes a live reload as docs and configs change. You can browse the site 
 
 ### Building
 
-```
+```console
 make build
 ```
 
