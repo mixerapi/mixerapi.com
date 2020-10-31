@@ -1,6 +1,8 @@
 # MixerAPI.com
 
-MixerAPI.com is built using [MkDocs](https://squidfunk.github.io/mkdocs-material/). It is designed to pull in the 
+See the official documentation at [MixerAPI.com](https://mixerapi.com). 
+
+Documentation was built using [MkDocs](https://squidfunk.github.io/mkdocs-material/). It is designed to pull in the 
 README.md files from all MixerAPI plugins. These are pulled in as git submodules. Additional documentation 
 can be added in the `docs/` directory and mapped to the navigation in `mkdocs.yml`.
 
